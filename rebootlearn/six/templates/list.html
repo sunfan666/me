@@ -1,0 +1,27 @@
+<a href='/logout'>logout </a>
+<form action='/adduser'>
+user:<input type="text" name='user'>
+pwd:<input type="text" name='pwd'>
+<input type="submit" value='add'>
+</form>
+
+<table border='1'>
+	<tr>
+		<td>user</td>
+		<td>pwd</td>
+		<td>action</td>
+	</tr>
+	{% for user in userlist %}
+	<tr>
+		<td>{{user[0]}}</td>
+		<td>{{user[1]}}</td>
+		<td>
+			<a href='/del?user={{user[0]}}'>delete</a>
+			<a href='/update?user={{user[0]}}'>update</a>	
+	</td>
+	</tr>
+
+	{% endfor %}
+
+
+</table>
