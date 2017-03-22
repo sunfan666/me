@@ -1,0 +1,232 @@
+{% extends 'layout.html' %} {% block body%}
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">添加机器</h4>
+      </div>
+      <div class="modal-body">
+
+        <form class="form-horizontal" id='addpc-form'>
+          <div class="form-group">
+            <label for="inputEmail3" class="col-sm-2 control-label">IP</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" name='ip'>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="inputPassword3" class="col-sm-2 control-label">Mem</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" name='mem'>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="inputPassword3" class="col-sm-2 control-label">idc</label>
+            <div class="col-sm-10">
+
+              <select class="form-control" name='idc_id'>
+        </select>
+
+
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="inputPassword3" class="col-sm-2 control-label">create_time</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" name='create_time'>
+            </div>
+          </div>
+
+        </form>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+        <button type="button" class="btn btn-success" id='addpc-btn'>添加</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="updateModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">更新机器</h4>
+      </div>
+      <div class="modal-body">
+
+        <form class="form-horizontal" id='updatepc-form'>
+          <input type="hidden" name='id'>
+          <div class="form-group">
+            <label for="inputEmail3" class="col-sm-2 control-label">IP</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" name='ip'>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="inputPassword3" class="col-sm-2 control-label">Mem</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" name='mem'>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="inputPassword3" class="col-sm-2 control-label">idc</label>
+            <div class="col-sm-10">
+
+              <select class="form-control" name='idc_id'>
+        </select>
+
+
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="inputPassword3" class="col-sm-2 control-label">create_time</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" name='create_time'>
+            </div>
+          </div>
+
+        </form>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+        <button type="button" class="btn btn-success" id='updatepc-btn'>编辑</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<div style="margin-top:20px">
+  <p class='add-btn1'>
+    <button type="button" class="btn btn-info " data-toggle="modal" data-target="#myModal">
+  添加机器
+</button>
+  </p>
+
+  <table class='table table-bordered'>
+    <thead>
+      <tr>
+        <th>id</th>
+        <th>IP</th>
+        <th>mem</th>
+        <th>idc_id</th>
+        <th>create_time</th>
+        <th>setting</th>
+      </tr>
+    </thead>
+    <tbody id='idc_table'>
+
+    </tbody>
+
+  </table>
+
+</div>
+
+{% endblock %} {% block js %}
+<script>
+  $(document).on('click', '.update-btn', function () {
+    $('#updateModal').modal('show')
+    console.log(this)
+    var id = $(this).data('id')
+
+    $.getJSON('/pclist?id=' + id, function (res) {
+      var data = res[0]
+      var updateForm = $('#updatepc-form')
+      updateForm.find('[name="id"]').val(data[0])
+      updateForm.find('[name="ip"]').val(data[1])
+      updateForm.find('[name="mem"]').val(data[2])
+      updateForm.find('[name="idc_id"]').val(data[5])
+      updateForm.find('[name="create_time"]').val(data[4])
+    })
+  })
+
+
+  var addpc_form = $('#addpc-form')
+  var addpc_idc = addpc_form.find('[name="idc_id"]')
+  $.getJSON('/idclist', function (res) {
+    var option_str = ''
+
+    $.each(res, function (i, v) {
+      option_str += '<option value="' + v[0] + '">' + v[1] + '</option>'
+    })
+    addpc_idc.html(option_str)
+    $('#updatepc-form').find('[name="idc_id"]').html(option_str)
+  })
+  $('#updatepc-btn').on('click', function () {
+
+    var form_str = $('#updatepc-form').serialize()
+    $.post('/updatepc', form_str, function (res) {
+      if (res == 'ok') {
+        $('#updateModal').modal('hide')
+        init_page()
+      }
+
+    })
+    console.log(form_str)
+  })
+  $('#addpc-btn').on('click', function () {
+    var form_str = addpc_form.serialize()
+    $.post('/addpc', form_str, function (res) {
+      if (res == 'ok') {
+
+        $('#myModal').modal('hide')
+        init_page()
+      }
+
+    })
+
+  })
+  $(document).on('click', '.del-btn', function () {
+    //$('.del-btn').on('click',function()
+    //var id = $(this).data('id')
+    var id = $(this).attr('data-id')
+    $.post('/delpc', { id: id }, function () {
+      init_page()
+    })
+
+
+  })
+
+  function init_page() {
+
+
+    $.getJSON('/pclist', function (res) {
+      console.log(res)
+      var idc_str = ''
+      $.each(res, function (i, v) {
+        idc_str += '<tr>'
+        idc_str += '<td>' + v[0] + '</td>'
+        idc_str += '<td>' + v[1] + '</td>'
+        idc_str += '<td>' + v[2] + 'G</td>'
+        idc_str += '<td>' + v[3] + '</td>'
+        idc_str += '<td>' + v[4] + '</td>'
+        idc_str += '<td>' + '<button class="btn btn-danger btn-xs del-btn" data-id="' + v[0] + '">delete</button>'
+        idc_str += '<button style="margin-left:10px" class="btn btn-info btn-xs update-btn" data-id="' + v[0] + '">update</button>' + '</td>'
+        idc_str += '</tr>'
+
+
+      })
+      $('#idc_table').html(idc_str)
+    })
+
+  }
+  init_page()
+
+</script>
+{% endblock %}

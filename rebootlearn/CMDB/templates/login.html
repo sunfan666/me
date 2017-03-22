@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Flat UI - Free Bootstrap Framework and Theme</title>
+  <meta name="description" content="Flat UI Kit Free is a Twitter Bootstrap Framework design and Theme, this responsive framework includes a PSD and HTML version."
+  />
+
+  <meta name="viewport" content="width=1000, initial-scaleh=1.0, maximum-scale=1.0">
+
+  <!-- Loading Bootstrap -->
+  <link href="static/bootstrap.min.css" rel="stylesheet">
+  <link rel="icon" href="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1488384752486&di=aa2c5eb3f8618f19313af4bb737a8baf&imgtype=0&src=http%3A%2F%2Fupload.csdncms.csdn.net%2F2014%2F1024%2F1414136758636.jpg">
+  <!-- Loading Flat UI -->
+  <link href="static/flatui/dist/css/flat-ui.css" rel="stylesheet">
+  <!--<form action="/login">
+    user <input type="text" name="user">
+    pwd <input type="text" name="pwd">
+    <input type="submit" value="login">-->
+  </form>
+  <style>
+    /* Prettyfy Theme */
+
+    .prettyprint {
+      background-color: #F7F7F9;
+      font-family: Menlo, 'Bitstream Vera Sans Mono', 'DejaVu Sans Mono', Monaco, Consolas, monospace;
+      border: 2px solid #E1E1E8;
+      padding: 15px 21px;
+    }
+
+    .pln {
+      color: #333333;
+    }
+
+    @media screen {
+      .str {
+        color: #dd1144;
+      }
+      .kwd {
+        color: #333333;
+      }
+      .com {
+        color: #999988;
+      }
+      .typ {
+        color: #445588;
+      }
+      .lit {
+        color: #445588;
+      }
+      .pun {
+        color: #333333;
+      }
+      .opn {
+        color: #333333;
+      }
+      .clo {
+        color: #333333;
+      }
+      .tag {
+        color: navy;
+      }
+      .atn {
+        color: teal;
+      }
+      .atv {
+        color: #dd1144;
+      }
+      .dec {
+        color: #333333;
+      }
+      .var {
+        color: teal;
+      }
+      .fun {
+        color: #990000;
+      }
+    }
+
+    @media print,
+    projection {
+      .str {
+        color: #006600;
+      }
+      .kwd {
+        color: #006;
+        font-weight: bold;
+      }
+      .com {
+        color: #600;
+        font-style: italic;
+      }
+      .typ {
+        color: #404;
+        font-weight: bold;
+      }
+      .lit {
+        color: #004444;
+      }
+      .pun,
+      .opn,
+      .clo {
+        color: #444400;
+      }
+      .tag {
+        color: #006;
+        font-weight: bold;
+      }
+      .atn {
+        color: #440044;
+      }
+      .atv {
+        color: #006600;
+      }
+    }
+    /* Specify class=linenums on a pre to get line numbering */
+
+    ol.linenums {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+
+    .container {
+      width: 970px !important;
+    }
+
+    .demo-headline {
+      padding: 73px 0 110px;
+      text-align: center;
+    }
+
+    .demo-logo {
+      font: 900 90px/100px "Helvetica Neue", Helvetica, Arial, sans-serif;
+      letter-spacing: -2px;
+      margin: 10px 0;
+    }
+
+    .demo-logo .logo {
+      background: url(../img/demo/logo-mask.png) center 0 no-repeat;
+      background-size: 236px 181px;
+      height: 181px;
+      margin: 0 auto 26px;
+      overflow: hidden;
+      text-indent: -9999em;
+      width: 236px;
+    }
+
+    .demo-logo small {
+      color: rgba(52, 73, 94, 0.3);
+      display: block;
+      font-size: 22px;
+      font-weight: 700;
+      letter-spacing: 0;
+      padding-top: 5px;
+    }
+
+    .demo-row {
+      margin-bottom: 20px;
+    }
+
+    .demo-row .demo-heading-note,
+    .demo-row .demo-text-note {
+      display: block;
+      width: 260px;
+      position: absolute;
+      bottom: 10px;
+      left: 0;
+      font-size: 13px;
+      line-height: 13px;
+      color: #c0c1c2;
+      font-weight: 400;
+    }
+
+    .demo-row .demo-text-note {
+      bottom: auto;
+      top: 10px;
+    }
+
+    .demo-row.typography-row .demo-content {
+      float: none;
+      width: auto;
+      clear: both;
+    }
+
+    .demo-row.typography-row .demo-type-example {
+      padding-left: 25%;
+      margin-bottom: 40px;
+      position: relative;
+    }
+
+    .demo-section-title {
+      font: 900 32px/40px "Helvetica Neue", Helvetica, Arial, sans-serif;
+      margin: 10px 0;
+    }
+
+    .demo-panel-title {
+      padding-top: 20px;
+      margin: 2px 0 20px;
+      font: bold 23px/40px "Helvetica Neue", Helvetica, Arial, sans-serif;
+    }
+
+    .demo-panel-title small {
+      color: #798795;
+      font-size: inherit;
+      font-weight: 400;
+    }
+
+    .demo-navigation {
+      margin-bottom: -4px;
+      margin-top: -10px;
+    }
+
+    .demo-pager {
+      margin-top: -20px;
+    }
+
+    .demo-tooltips {
+      height: 126px;
+    }
+
+    .demo-tooltips .tooltip {
+      left: -8px !important;
+      position: relative !important;
+      top: -8px !important;
+    }
+
+    .demo-headings {
+      margin-bottom: 12px;
+    }
+
+    .demo-tiles {
+      margin-bottom: 46px;
+    }
+
+    .demo-icons {
+      font-size: 32px;
+      margin-left: -20px;
+      padding-left: 20px;
+    }
+
+    .demo-icons .demo-content {
+      margin: 0 0 0 -35px;
+    }
+
+    .demo-icons .demo-content>span {
+      display: inline-block;
+      margin: 0 0 32px 35px;
+      width: 24px;
+      font-size: 24px;
+    }
+
+    .demo-icons-tooltip {
+      bottom: 0;
+      color: #c2c8cf;
+      font-size: 12px;
+      left: 100%;
+      margin-left: 0 !important;
+      position: absolute;
+      width: 80px;
+    }
+
+    .demo-illustrations .demo-content {
+      margin: 0 0 0 -40px;
+      padding-top: 20px;
+    }
+
+    .demo-illustrations .demo-content:before,
+    .demo-illustrations .demo-content:after {
+      content: " ";
+      display: table;
+    }
+
+    .demo-illustrations .demo-content:after {
+      clear: both;
+    }
+
+    .demo-illustrations .demo-content>div {
+      float: left;
+      width: 100px;
+      height: 100px;
+      line-height: 100px;
+      margin: 0 0 40px 40px;
+      text-align: center;
+    }
+
+    .demo-illustrations img {
+      display: inline-block;
+      max-height: 100px;
+      max-width: 100px;
+      vertical-align: middle;
+    }
+
+    .demo-samples {
+      margin-bottom: 46px;
+    }
+
+    .demo-download-section {
+      float: none;
+      margin: 0 auto;
+      padding: 60px 0 90px 20px;
+      text-align: center;
+    }
+
+    .demo-download-section [class*='fui-'] {
+      margin: 3px 0 -3px;
+    }
+
+    .demo-download {
+      background-color: #ebedef;
+      height: 190px;
+      margin: 0 auto 32px;
+      padding: 40px 28px 30px 32px;
+      text-align: center;
+      width: 190px;
+      border-radius: 50%;
+    }
+
+    .demo-download img {
+      height: 104px;
+      width: 82px;
+    }
+
+    .demo-download-text {
+      font-size: 15px;
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    .demo-text-box a:hover {
+      color: #1abc9c;
+    }
+
+    .demo-browser {
+      background: #2c3e50 url(../img/demo/browser.png) 0 0 no-repeat;
+      background-size: 659px 42px;
+      color: #ffffff;
+      margin: 0 41px 140px 0;
+      padding-top: 42px;
+      border-radius: 0 0 6px 6px;
+    }
+
+    .demo-browser-side {
+      float: left;
+      padding: 22px 20px;
+      width: 151px;
+    }
+
+    .demo-browser-side>h5 {
+      font-size: 16px;
+      margin-top: 4px;
+      margin-bottom: 3px;
+      text-transform: none;
+      font-weight: 400;
+    }
+
+    .demo-browser-side>h6 {
+      font-size: 11px;
+      font-weight: 300;
+      line-height: 18px;
+      margin-top: 3px;
+      text-transform: none;
+      -webkit-font-smoothing: subpixel-antialiased;
+    }
+
+    .demo-browser-author {
+      background: url(../img/demo/browser-author.jpg) center no-repeat;
+      border: 3px solid #ffffff;
+      display: block;
+      height: 84px;
+      margin: 0 auto;
+      width: 84px;
+      border-radius: 50%;
+    }
+
+    .demo-browser-action {
+      padding: 30px 0 12px;
+    }
+
+    .demo-browser-action>.btn {
+      padding: 7px 0 8px 11px !important;
+      text-align: left;
+      border-radius: 3px;
+    }
+
+    .demo-browser-action>.btn>[class^="fui-"] {
+      margin-right: 12px;
+      position: relative;
+      top: 1px;
+    }
+
+    .demo-browser-content {
+      background-color: #34495e;
+      overflow: hidden;
+      padding: 21px 0 0 20px;
+      border-radius: 0 0 6px;
+    }
+
+    .demo-browser-content>img {
+      border: 6px solid #ffffff;
+      float: left;
+      margin: 0 15px 20px 0;
+      width: 146px;
+    }
+
+    @media only screen and (-webkit-min-device-pixel-ratio: 2),
+    only screen and (-webkit-min-device-pixel-ratio: 1.5),
+    only screen and (-moz-min-device-pixel-ratio: 2),
+    only screen and (-o-min-device-pixel-ratio: 3/2),
+    only screen and (-o-min-device-pixel-ratio: 2/1),
+    only screen and (min--moz-device-pixel-ratio: 1.5),
+    only screen and (min-device-pixel-ratio: 1.5),
+    only screen and (min-device-pixel-ratio: 2) {
+      .logo {
+        background-image: url(../img/demo/logo-mask-2x.png);
+      }
+      .demo-browser {
+        background-image: url(../img/demo/browser-2x.png);
+      }
+    }
+
+    .demo-swatches-row [class*="col"] {
+      float: left;
+      min-height: 1px;
+    }
+
+    .demo-swatches-row .swatches-col {
+      width: 800px;
+      margin-left: -5px;
+    }
+
+    .demo-swatches-row .swatches-desc-col {
+      width: 140px;
+      margin-left: 20px;
+    }
+  </style>
+
+  <link rel="shortcut icon" href="img/favicon.ico">
+
+  <!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
+  <!--[if lt IE 9]>
+      <script src="dist/js/vendor/html5shiv.js"></script>
+      <script src="dist/js/vendor/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+  <div class="container">
+
+
+
+    <div class="login">
+      <div class="login-screen">
+        <div class="login-icon">
+          <img src="http://51reboot.com/images/hammer.png" alt="Welcome to CMDB  System" />
+          <h4>Welcome to <small>CMDB  System</small></h4>
+        </div>
+
+        <div class="login-form">
+          <div class="form-group">
+            <input type="text" class="form-control login-field" value="" placeholder="Input your Name" id="login-name" />
+            <label class="login-field-icon fui-user" for="login-name"></label>
+          </div>
+
+          <div class="form-group">
+            <input type="password" class="form-control login-field" value="" placeholder="Input your Passwd" id="login-pass" />
+            <label class="login-field-icon fui-lock" for="login-pass"></label>
+          </div>
+
+          <a class="btn btn-primary btn-lg btn-block" href="/pc">Log in</a>
+          <!--<a class="login-link" href="#">Lost your password?</a>-->
+        </div>
+      </div>
+    </div>
+
+
+
+  </div>
+  <!-- /container -->
+
+
+  <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+
+</body>
+
+</html>
