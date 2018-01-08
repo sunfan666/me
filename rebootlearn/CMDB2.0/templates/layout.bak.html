@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>cmdb</title>
+    <link href="/static/bootstrap.min.css" rel="stylesheet">
+
+    <link href="/static/metis-menu.min.css" rel="stylesheet">
+    <link href="/static/datatable.css" rel="stylesheet">
+    <link href="/static/sweet-alert.css" rel="stylesheet">
+
+    <link href="/static/vendor/animate.css" rel="stylesheet">
+
+<link href="http://51reboot.com/static/images/favicon.ico" type="image/x-icon" rel="shortcut icon">
+	<style type="text/css">
+		.navbar-header{
+			width: 200px;
+			text-align: center;
+			/*padding-left: 20px;*/
+		}
+		.navbar-brand{
+			font-size: 20px;
+
+		}
+        .table{
+            margin-top: 10px;
+        }
+
+.hover{
+    cursor: pointer;
+}
+.progress-reboot{
+    position: absolute;
+    height: 2px;
+    top:0px;
+    background: #337ab7;
+    width: 0%;
+    z-index: 2000;
+}
+#main-content{
+    overflow:auto;
+}
+#main-content .add-btn{
+    position: absolute;
+    z-index:100;
+    width: 200px;
+}
+#wrapper{
+    background: #2e3c4e;
+}
+.navbar-default .navbar-nav>li>a{
+    color:white;
+}
+.navbar-default .navbar-nav>li>a:hover{
+    background: #299d71;
+}
+
+.navbar-default .navbar-brand{
+    color:white;
+}
+
+.navbar-default .navbar-brand:hover{
+    color:white;
+}
+.select2-container{
+    width: 100% !important;
+}
+button.detail{
+    margin-left: 10px;
+}
+.sweet-alert h2{
+    margin-top: 30px;
+}
+
+	</style>
+
+
+</head>
+
+<body>
+
+<div id="wrapper">
+        <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/">cmdb</a>
+            </div>
+
+            <ul class="nav navbar-nav">
+                <li><a href="http://www.51reboot.com" target="_blank">首页</a></li>
+            </ul>
+            <ul class="nav navbar-nav pull-right">
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{username}} <span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                    <li>
+                        <a href="/logout">退出</a>
+                    </li>  
+                  </ul>
+                </li>
+   
+            </ul>
+            <form class="navbar-form">
+                <!-- <input type="text" class="form-control" placeholder="Search..."> -->
+            </form>
+
+            <div class="navbar-default sidebar" style="margin-top:42px" role="navigation">
+                <div class="sidebar-nav navbar-collapse">
+                    <ul class="nav" id="side-menu">
+
+
+
+                    </ul>
+                </div>
+                <!-- /.sidebar-collapse -->
+            </div>
+            <!-- /.navbar-static-side -->
+        </nav>
+
+        <div id="page-wrapper" class='animated '>
+            <div class="container-fluid">
+                <div class="row">
+                <div id='main-content' class="col-md-12" style='padding-top:20px;'>
+
+                    {% block body %}
+                    {% endblock %}
+                </div>
+                </div>
+            </div>
+        </div>
+
+
+
+</div>
+    <script src="/static/jquery.min.js"></script>
+    <script src="/static/bootstrap.js"></script>
+
+    <!-- Metis Menu Plugin JavaScript -->
+    <script src="/static/datatable.js"></script>
+    <script src="/static/metis-menu.min.js"></script>
+    <script src="/static/validate.js"></script>
+    <script src="/static/bootstrap.js"></script>
+
+    <script src='/static/sweet-alert.min.js'></script>
+
+    <!-- Custom Theme JavaScript -->
+
+    {% block js %}
+    {% endblock %}
+
+
+</body>
+
+</html>

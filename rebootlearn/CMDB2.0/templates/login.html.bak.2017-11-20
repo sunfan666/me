@@ -1,0 +1,21 @@
+
+<!--This is comments
+{{error_msg}}
+<br/>
+{{sb}}
+-->
+
+<table border='1'>
+{% for user in ulist %}
+    <tr>
+         <td>{{user[0]}}</td>
+	 <td>{{user[1]}}</td>
+    </tr>
+{% endfor  %}
+</table>
+
+<form action='/loginaction'>
+user<input type='text' name='user'>
+pwd<input type='text' name='pwd'>
+<input type='submit' value='login'>
+</form>

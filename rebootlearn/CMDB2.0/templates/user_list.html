@@ -1,0 +1,56 @@
+<link rel='stylesheet' href='http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css'>
+
+<a href='/logout'>退出</a>
+
+<!-- <form action='/adduser'>
+user:<input type='text' name='user'>
+pwd:<input type='text' name='pwd'>
+<input type='submit' value='Add'>
+</form> -->
+<!-- 用bootstrap取代上边的丑比输入框  -->
+<div class='container'>
+<form class="form-inline" action='/adduser'>
+
+  <div class="form-group">
+    <p class="form-control-static">用户名</p>
+  </div>
+
+  <div class="form-group">
+    <input type="text" class="form-control" id="inputPassword2" placeholder="Name" name='user'>
+  </div>
+
+  <div class="form-group">
+    <p class="form-control-static">密码</p>
+  </div>
+
+  <div class="form-group">
+    <input type="text" class="form-control" id="inputPassword2" placeholder="Password" name='pwd'>
+  </div> 
+
+  <button type="submit" class="btn btn-primary">添加用户</button> 
+</form>
+</div>
+<!--<table border='1' align='center'>-->
+<div class='container'>
+  <div class='row'>
+     <div class='col-md-12'>
+	<table class='table table-bordered'>
+    	<tr>
+		<th>user</th>
+		<th>pwd</th>
+		<th>action</th>
+    	</tr>
+    	{% for user in userlist %}
+       	 <tr>
+	    <td>{{user[0]}}</td>
+	    <td>{{user[1]}}</td>
+	    <td>
+                <a class='btn btn-danger btn-xs' href='/del?user={{user[0]}}'>删除</a>
+                <a class='btn btn-success btn-xs' href='/update?user={{user[0]}}'>更新</a>
+            </td>
+        </tr>
+    	{% endfor %}
+</table>
+     </div>
+  </div>
+</div>
