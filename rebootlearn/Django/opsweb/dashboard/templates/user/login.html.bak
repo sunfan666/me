@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+   <title>{{ title  }}</title>
+   <meta charset='utf-8'>
+</head>
+<body>
+    <ul>
+      <form action='/dashboard/login/' method='post'>
+         user:<li><input type='text' name='username' id='username'/></li>
+                    <br>
+         pwd:<li><input type='password' name='password' id='password'/></li>
+         <li><input type='submit' value='登陆' id='form_submit'></li>
+      </form>
+    </ul>
+
+
+<!-- <script src='/static/jquery.js'></script> -->
+<script src='http://cdn.bootcss.com/jquery/1.12.4/jquery.min.js'></script>
+
+<script>
+$(function(){
+  $('#form_submit').click(function(){
+    var username = $('#username').val()
+    var password = $('#password').val()
+    console.log("user: "+ username)
+    console.log("pwd: "+ password)
+    $.post("/dashboard/login/", 
+       { username: username, password: password },//key自定义的（username password）
+       function(data){
+          alert("Data Loaded: " + data);
+       }
+       ); 
+    return false;
+})
+});
+</script>
+
+</body>
+</html>
+

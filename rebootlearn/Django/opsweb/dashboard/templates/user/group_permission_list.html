@@ -1,0 +1,36 @@
+{% extends "public/layout.html" %}
+
+{% block css %}
+    <style>
+        .permission-content{width: 260px !important;}
+        .permission-point{margin-left: 280px !important;}
+    </style>
+{% endblock %}
+
+{% block body %}
+    <dl class="dl-horizontal">
+        <form action="" method="post" role="form" class="form-horizontal">
+            <!--循环content_type-->
+        {% for ct in content_type %}
+            <dt class="permission-content">{{ ct.app_label }}---{{ ct.model }}: </dt>
+            <dd class="permission-point">
+                <ul class="list-unstyled">
+                    {% for per in ct.permission_set.all %}
+                        <li>
+                            <input type="checkbox" name="permission" value="{{ per.id }}" {% if per.id in group_permissions %}checked{% endif %}>
+                            <label>{{ per.name }}</label>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </dd>
+        {% endfor %}
+            <div class="form-group form-footer">
+                <div class="col-sm-offset-3 col-sm-8">
+                    <input type="hidden" name="group" value="{{ group }}">
+                    <input type="submit" class="btn btn-primary" value="修改">
+                    <input type="submit" class="btn btn-warning" value="重置">
+                </div>
+            </div>
+        </form>
+    </dl>
+{% endblock %}

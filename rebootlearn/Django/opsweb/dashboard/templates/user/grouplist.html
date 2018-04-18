@@ -1,0 +1,140 @@
+{% extends "public/layout.html" %}
+
+{% block body %}
+    <table class="table table-striped">
+        <caption>
+            <button id="add_group" class="btn btn-primary" type="button">添加用户组</button>
+        </caption>
+        <tr>
+            <th>用户组</th>
+            <th>操作</th>
+        </tr>
+        {% for group in object_list %}
+            <tr>
+                <td>{{ group.name }}</td>
+                <td>
+                    <button class="btn btn-primary btn-sm show_group_users" data='{"gid":"{{ group.id }}","groupname":"{{ group.name }}"}'>成员列表</button>
+                    <a class="btn btn-warning btn-sm show_group_users" href="/group/permissions/?gid={{ group.id }}">查看权限</a>
+                    <a class="btn btn-danger btn-sm show_group_users" href="/group/permissionlist/?gid={{ group.id }}">修改权限</a>
+                </td>
+            </tr>
+        {% endfor %}
+    </table>
+
+    <div class="modal fade" id="create_group" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">×</button>
+                    <h4>添加group</h4>
+                </div>
+                <div class="modal-body form-inline">
+                    <div class="form-group">
+                        <label for="exampleInputName2">用户组：</label>
+                        <input type="text" class="form-control" id="form_groupname" placeholder="请输入用户组名称" />
+                    </div>
+                    <button class="btn btn-primary" id="create_group_btn">提交</button>
+                </div>
+                <div class="modal-footer">
+                    <input class="btn btn-default" data-dismiss="modal" aria-hidden="true" type="button" value="取消">
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <div class="modal fade" id="modal_show_group_user_list" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">×</button>
+                    <h4>用户组名:<span id="modal_show_group_user_list_title"></span></h4>
+                </div>
+                <div class="modal-body form-inline" id="modal_show_group_user_content_list">
+
+                </div>
+                <div class="modal-footer">
+                    <input class="btn btn-default" data-dismiss="modal" aria-hidden="true" type="button" value="确定">
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
+{% block js %}
+    <script>
+        //<!--function是页面加载完毕之后的操作-->
+        $(function(){
+//            添加用户组
+            $("#add_group").click(function(){
+                var create_group_modal = $("#create_group");
+                create_group_modal.modal("show");
+                //执行添加用户组
+                $("#create_group_btn").click(function(){
+                    var group_input = $("#form_groupname");
+                    var group_value = group_input.val();
+                    create_group_modal.modal("hide");
+                    if (group_value == ""){
+                        swal("添加失败", "用户组名不能为空", 'error');
+                        return false;
+                    }
+                    $.post("", {"name": group_value},function(res){
+                        if(res.status==0){
+                            swal({
+                                "title": "添加成功",
+                                "text": "",
+                                "type": "success"
+                            },function(){
+                                setTimeout(function(){
+                                    window.location.reload();
+                                },50);
+                            })
+                        }else{
+                            swal("操作失败", res.errmsg, "error");
+                        }
+                    })
+
+                })
+
+            });
+        //查看组内成员
+            $(".show_group_users").click(function(){
+                var data = JSON.parse($(this).attr('data'));
+                console.log(data);
+                var groupid = data.gid;
+                $.get("/group/usergroup/", {'gid':groupid},function(res){
+                    console.log(res);
+                    var html = '<table class="table table-striped">';
+                    $.each(res, function(k, v){
+                        html+= '<tr>';
+                        html+= '<td>'+v.cn_name+'</td>';
+                        html+= '<td>'+v.username+'</td>';
+                        html+= '<td>'+v.email+'</td>';
+                        html+= '<td><button class="btn btn-danger btn-sm del_group_user" data="'+v.id+'">删除</button></td>';
+                        html+= '</tr>';
+                    });
+                    html+= '</table>';
+                    console.log(html);
+                    $('#modal_show_group_user_list_title').html(data.groupname);
+                    $('#modal_show_group_user_content_list').html(html);
+                    $('#modal_show_group_user_list').modal('show');
+                    $('.del_group_user').click(function(){
+                        var click_obj = $(this);
+                        var userid = click_obj.attr('data');
+                        console.log(userid);
+                        console.log(data.gid);
+                        $.ajax({
+                            url:"/group/usergroup/",
+                            type:"DELETE",
+                            data:{"groupid":groupid, "userid":userid},
+                        })
+                    })
+                })
+               })
+            })
+    </script>
+{% endblock %}

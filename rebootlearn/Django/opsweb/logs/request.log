@@ -1,0 +1,1143 @@
+2018-03-26 14:33:38,735 - /root/python27/devopsenv/lib/python2.7/site-packages/django/core/handlers/base.py:256[ERROR] - Internal Server Error: /
+Traceback (most recent call last):
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/core/handlers/base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/local/python27/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/root/python27/devopsenv/opsweb/opsweb/urls.py", line 21, in <module>
+    url(r'^',include("dashboard.urls")),
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/conf/urls/__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/local/python27/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/root/python27/devopsenv/opsweb/dashboard/urls.py", line 4, in <module>
+    from . import views
+  File "/root/python27/devopsenv/opsweb/dashboard/views.py", line 47, in <module>
+    class IndexView(View):
+  File "/root/python27/devopsenv/opsweb/dashboard/views.py", line 48, in IndexView
+    @method_decorator(login_required)
+NameError: name 'method_decorator' is not defined
+2018-03-26 14:34:50,728 - /root/python27/devopsenv/lib/python2.7/site-packages/django/core/handlers/base.py:256[ERROR] - Internal Server Error: /
+Traceback (most recent call last):
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/core/handlers/base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/local/python27/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/root/python27/devopsenv/opsweb/opsweb/urls.py", line 21, in <module>
+    url(r'^',include("dashboard.urls")),
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/conf/urls/__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/local/python27/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/root/python27/devopsenv/opsweb/dashboard/urls.py", line 4, in <module>
+    from . import views
+  File "/root/python27/devopsenv/opsweb/dashboard/views.py", line 49, in <module>
+    class IndexView(View):
+  File "/root/python27/devopsenv/opsweb/dashboard/views.py", line 51, in IndexView
+    @method_decorator(permission_requried('dashboard.view_server'))
+NameError: name 'permission_requried' is not defined
+2018-03-27 12:55:02,800 - /root/python27/devopsenv/lib/python2.7/site-packages/django/views/generic/base.py:95[WARNING] - Method Not Allowed (POST): /group/list/
+2018-03-27 12:55:02,806 - /root/python27/devopsenv/lib/python2.7/site-packages/django/views/generic/base.py:95[WARNING] - Method Not Allowed (POST): /group/list/
+2018-03-27 13:23:49,341 - /root/python27/devopsenv/lib/python2.7/site-packages/django/core/handlers/base.py:170[WARNING] - Not Found: /group/
+2018-03-27 13:26:35,842 - /root/python27/devopsenv/lib/python2.7/site-packages/django/core/handlers/base.py:170[WARNING] - Not Found: /group/
+2018-03-27 13:57:15,027 - /root/python27/devopsenv/lib/python2.7/site-packages/django/core/handlers/base.py:256[ERROR] - Internal Server Error: /user/userlist/
+Traceback (most recent call last):
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/core/handlers/base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/local/python27/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/root/python27/devopsenv/opsweb/opsweb/urls.py", line 21, in <module>
+    url(r'^',include("dashboard.urls")),
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/conf/urls/__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/local/python27/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/root/python27/devopsenv/opsweb/dashboard/urls.py", line 28
+    url(r'^list/$', group.GroupListView.as_view()),
+      ^
+SyntaxError: invalid syntax
+2018-03-27 13:57:50,657 - /root/python27/devopsenv/lib/python2.7/site-packages/django/core/handlers/base.py:256[ERROR] - Internal Server Error: /user/userlist/
+Traceback (most recent call last):
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/core/handlers/base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/local/python27/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/root/python27/devopsenv/opsweb/opsweb/urls.py", line 21, in <module>
+    url(r'^',include("dashboard.urls")),
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/conf/urls/__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/local/python27/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/root/python27/devopsenv/opsweb/dashboard/urls.py", line 6, in <module>
+    from dashboard.user import group
+  File "/root/python27/devopsenv/opsweb/dashboard/user/group.py", line 46
+    groups = [for group in all_groups if group not in user.group.all()]
+                ^
+SyntaxError: invalid syntax
+2018-03-27 13:58:19,153 - /root/python27/devopsenv/lib/python2.7/site-packages/django/core/handlers/base.py:256[ERROR] - Internal Server Error: /group/
+Traceback (most recent call last):
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/views/generic/base.py", line 89, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/root/python27/devopsenv/opsweb/dashboard/user/group.py", line 48, in get
+    return HttpResponse(serializers.serializers('json', all_groups, content_type='application/json'))
+AttributeError: 'module' object has no attribute 'serializers'
+2018-03-27 13:59:16,014 - /root/python27/devopsenv/lib/python2.7/site-packages/django/core/handlers/base.py:256[ERROR] - Internal Server Error: /group/
+Traceback (most recent call last):
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/views/generic/base.py", line 89, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/root/python27/devopsenv/opsweb/dashboard/user/group.py", line 48, in get
+    return HttpResponse(serializers.serializers('json', all_groups, content_type='application/json'))
+AttributeError: 'module' object has no attribute 'serializers'
+2018-03-27 14:00:24,078 - /root/python27/devopsenv/lib/python2.7/site-packages/django/core/handlers/base.py:256[ERROR] - Internal Server Error: /group/
+Traceback (most recent call last):
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/views/generic/base.py", line 89, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/root/python27/devopsenv/opsweb/dashboard/user/group.py", line 48, in get
+    return HttpResponse(serializers.serializer('json', all_groups, content_type='application/json'))
+AttributeError: 'module' object has no attribute 'serializer'
+2018-03-27 14:01:28,306 - /root/python27/devopsenv/lib/python2.7/site-packages/django/core/handlers/base.py:256[ERROR] - Internal Server Error: /group/
+Traceback (most recent call last):
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/views/generic/base.py", line 89, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/root/python27/devopsenv/opsweb/dashboard/user/group.py", line 48, in get
+    return HttpResponse(serializers.serializer('json', all_groups), content_type='application/json')
+AttributeError: 'module' object has no attribute 'serializer'
+2018-03-27 14:02:10,165 - /root/python27/devopsenv/lib/python2.7/site-packages/django/core/handlers/base.py:256[ERROR] - Internal Server Error: /group/
+Traceback (most recent call last):
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/views/generic/base.py", line 89, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/root/python27/devopsenv/opsweb/dashboard/user/group.py", line 48, in get
+    return HttpResponse(serializers.serializer('json', all_groups), content_type='application/json')
+AttributeError: 'module' object has no attribute 'serializer'
+2018-03-27 14:02:52,259 - /root/python27/devopsenv/lib/python2.7/site-packages/django/core/handlers/base.py:256[ERROR] - Internal Server Error: /group/
+Traceback (most recent call last):
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/views/generic/base.py", line 89, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/root/python27/devopsenv/opsweb/dashboard/user/group.py", line 48, in get
+    return HttpResponse(serializers.serializer('json', all_groups), content_type='application/json')
+AttributeError: 'module' object has no attribute 'serializer'
+2018-03-27 14:04:35,810 - /root/python27/devopsenv/lib/python2.7/site-packages/django/core/handlers/base.py:170[WARNING] - Not Found: /group/usergroup/
+2018-03-27 14:19:22,331 - /root/python27/devopsenv/lib/python2.7/site-packages/django/core/handlers/base.py:256[ERROR] - Internal Server Error: /group/usergroup/
+Traceback (most recent call last):
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/views/generic/base.py", line 89, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/root/python27/devopsenv/opsweb/dashboard/user/group.py", line 57, in post
+    return JsonResponse(ret, save=True)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/http/response.py", line 536, in __init__
+    super(JsonResponse, self).__init__(content=data, **kwargs)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/http/response.py", line 340, in __init__
+    super(HttpResponse, self).__init__(*args, **kwargs)
+TypeError: __init__() got an unexpected keyword argument 'save'
+2018-03-27 14:33:14,158 - /root/python27/devopsenv/lib/python2.7/site-packages/django/core/handlers/base.py:256[ERROR] - Internal Server Error: /group/usergroup/
+Traceback (most recent call last):
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/views/generic/base.py", line 89, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/root/python27/devopsenv/opsweb/dashboard/user/group.py", line 77, in post
+    return JsonResponse(ret, save=True)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/http/response.py", line 536, in __init__
+    super(JsonResponse, self).__init__(content=data, **kwargs)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/http/response.py", line 340, in __init__
+    super(HttpResponse, self).__init__(*args, **kwargs)
+TypeError: __init__() got an unexpected keyword argument 'save'
+2018-03-27 14:35:39,026 - /root/python27/devopsenv/lib/python2.7/site-packages/django/views/generic/base.py:95[WARNING] - Method Not Allowed (GET): /group/usergroup/
+2018-03-27 14:43:17,348 - /root/python27/devopsenv/lib/python2.7/site-packages/django/core/handlers/base.py:256[ERROR] - Internal Server Error: /group/usergroup/
+Traceback (most recent call last):
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/views/generic/base.py", line 89, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/root/python27/devopsenv/opsweb/dashboard/user/group.py", line 77, in post
+    return JsonResponse(ret, save=True)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/http/response.py", line 536, in __init__
+    super(JsonResponse, self).__init__(content=data, **kwargs)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/http/response.py", line 340, in __init__
+    super(HttpResponse, self).__init__(*args, **kwargs)
+TypeError: __init__() got an unexpected keyword argument 'save'
+2018-03-27 14:43:30,636 - /root/python27/devopsenv/lib/python2.7/site-packages/django/core/handlers/base.py:256[ERROR] - Internal Server Error: /group/usergroup/
+Traceback (most recent call last):
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/views/generic/base.py", line 89, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/root/python27/devopsenv/opsweb/dashboard/user/group.py", line 77, in post
+    return JsonResponse(ret, save=True)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/http/response.py", line 536, in __init__
+    super(JsonResponse, self).__init__(content=data, **kwargs)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/http/response.py", line 340, in __init__
+    super(HttpResponse, self).__init__(*args, **kwargs)
+TypeError: __init__() got an unexpected keyword argument 'save'
+2018-03-27 14:51:40,727 - /root/python27/devopsenv/lib/python2.7/site-packages/django/core/handlers/base.py:256[ERROR] - Internal Server Error: /group/usergroup/
+Traceback (most recent call last):
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/views/generic/base.py", line 89, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/root/python27/devopsenv/opsweb/dashboard/user/group.py", line 78, in post
+    return JsonResponse(ret, save=True)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/http/response.py", line 536, in __init__
+    super(JsonResponse, self).__init__(content=data, **kwargs)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/http/response.py", line 340, in __init__
+    super(HttpResponse, self).__init__(*args, **kwargs)
+TypeError: __init__() got an unexpected keyword argument 'save'
+2018-03-27 14:53:26,213 - /root/python27/devopsenv/lib/python2.7/site-packages/django/core/handlers/base.py:256[ERROR] - Internal Server Error: /group/usergroup/
+Traceback (most recent call last):
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/views/generic/base.py", line 89, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/root/python27/devopsenv/opsweb/dashboard/user/group.py", line 79, in post
+    return JsonResponse(ret, save=True)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/http/response.py", line 536, in __init__
+    super(JsonResponse, self).__init__(content=data, **kwargs)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/http/response.py", line 340, in __init__
+    super(HttpResponse, self).__init__(*args, **kwargs)
+TypeError: __init__() got an unexpected keyword argument 'save'
+2018-03-27 14:54:12,340 - /root/python27/devopsenv/lib/python2.7/site-packages/django/core/handlers/base.py:256[ERROR] - Internal Server Error: /group/usergroup/
+Traceback (most recent call last):
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/views/generic/base.py", line 89, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/root/python27/devopsenv/opsweb/dashboard/user/group.py", line 78, in post
+    return JsonResponse(ret, save=True)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/http/response.py", line 536, in __init__
+    super(JsonResponse, self).__init__(content=data, **kwargs)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/http/response.py", line 340, in __init__
+    super(HttpResponse, self).__init__(*args, **kwargs)
+TypeError: __init__() got an unexpected keyword argument 'save'
+2018-03-27 14:58:23,022 - /root/python27/devopsenv/lib/python2.7/site-packages/django/core/handlers/base.py:256[ERROR] - Internal Server Error: /group/usergroup/
+Traceback (most recent call last):
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/views/generic/base.py", line 89, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/root/python27/devopsenv/opsweb/dashboard/user/group.py", line 78, in post
+    return JsonResponse(ret, save=True)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/http/response.py", line 536, in __init__
+    super(JsonResponse, self).__init__(content=data, **kwargs)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/http/response.py", line 340, in __init__
+    super(HttpResponse, self).__init__(*args, **kwargs)
+TypeError: __init__() got an unexpected keyword argument 'save'
+2018-03-27 15:20:00,591 - /root/python27/devopsenv/lib/python2.7/site-packages/django/core/handlers/base.py:256[ERROR] - Internal Server Error: /user/userlist/
+Traceback (most recent call last):
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/core/handlers/base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/local/python27/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/root/python27/devopsenv/opsweb/opsweb/urls.py", line 21, in <module>
+    url(r'^',include("dashboard.urls")),
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/conf/urls/__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/local/python27/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/root/python27/devopsenv/opsweb/dashboard/urls.py", line 30, in <module>
+    url(r'^del/$', group.GroupdelView.as_view()),
+AttributeError: 'module' object has no attribute 'GroupdelView'
+2018-03-27 15:26:01,003 - /root/python27/devopsenv/lib/python2.7/site-packages/django/core/handlers/base.py:256[ERROR] - Internal Server Error: /group/delgroup/
+Traceback (most recent call last):
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/views/generic/base.py", line 89, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/root/python27/devopsenv/opsweb/dashboard/user/group.py", line 123, in post
+    return JsonResponse(ret, save=True)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/http/response.py", line 536, in __init__
+    super(JsonResponse, self).__init__(content=data, **kwargs)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/http/response.py", line 340, in __init__
+    super(HttpResponse, self).__init__(*args, **kwargs)
+TypeError: __init__() got an unexpected keyword argument 'save'
+2018-03-27 15:26:54,128 - /root/python27/devopsenv/lib/python2.7/site-packages/django/core/handlers/base.py:256[ERROR] - Internal Server Error: /group/delgroup/
+Traceback (most recent call last):
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/views/generic/base.py", line 89, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/root/python27/devopsenv/opsweb/dashboard/user/group.py", line 123, in post
+    return JsonResponse(ret, save=True)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/http/response.py", line 536, in __init__
+    super(JsonResponse, self).__init__(content=data, **kwargs)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/http/response.py", line 340, in __init__
+    super(HttpResponse, self).__init__(*args, **kwargs)
+TypeError: __init__() got an unexpected keyword argument 'save'
+2018-03-27 15:27:01,728 - /root/python27/devopsenv/lib/python2.7/site-packages/django/core/handlers/base.py:256[ERROR] - Internal Server Error: /group/usergroup/
+Traceback (most recent call last):
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/views/generic/base.py", line 89, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/root/python27/devopsenv/opsweb/dashboard/user/group.py", line 96, in post
+    return JsonResponse(ret, save=True)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/http/response.py", line 536, in __init__
+    super(JsonResponse, self).__init__(content=data, **kwargs)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/http/response.py", line 340, in __init__
+    super(HttpResponse, self).__init__(*args, **kwargs)
+TypeError: __init__() got an unexpected keyword argument 'save'
+2018-03-27 15:28:37,463 - /root/python27/devopsenv/lib/python2.7/site-packages/django/core/handlers/base.py:256[ERROR] - Internal Server Error: /group/usergroup/
+Traceback (most recent call last):
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/views/generic/base.py", line 89, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/root/python27/devopsenv/opsweb/dashboard/user/group.py", line 96, in post
+    return JsonResponse(ret, save=True)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/http/response.py", line 536, in __init__
+    super(JsonResponse, self).__init__(content=data, **kwargs)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/http/response.py", line 340, in __init__
+    super(HttpResponse, self).__init__(*args, **kwargs)
+TypeError: __init__() got an unexpected keyword argument 'save'
+2018-03-27 15:32:32,993 - /root/python27/devopsenv/lib/python2.7/site-packages/django/core/handlers/base.py:256[ERROR] - Internal Server Error: /group/delgroup/
+Traceback (most recent call last):
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/views/generic/base.py", line 89, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/root/python27/devopsenv/opsweb/dashboard/user/group.py", line 123, in post
+    return JsonResponse(ret, save=True)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/http/response.py", line 536, in __init__
+    super(JsonResponse, self).__init__(content=data, **kwargs)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/http/response.py", line 340, in __init__
+    super(HttpResponse, self).__init__(*args, **kwargs)
+TypeError: __init__() got an unexpected keyword argument 'save'
+2018-03-27 15:42:37,342 - /root/python27/devopsenv/lib/python2.7/site-packages/django/core/handlers/base.py:256[ERROR] - Internal Server Error: /group/delgroup/
+Traceback (most recent call last):
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/views/generic/base.py", line 89, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/root/python27/devopsenv/opsweb/dashboard/user/group.py", line 123, in post
+    return JsonResponse(ret, save=True)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/http/response.py", line 536, in __init__
+    super(JsonResponse, self).__init__(content=data, **kwargs)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/http/response.py", line 340, in __init__
+    super(HttpResponse, self).__init__(*args, **kwargs)
+TypeError: __init__() got an unexpected keyword argument 'save'
+2018-03-27 15:42:56,440 - /root/python27/devopsenv/lib/python2.7/site-packages/django/core/handlers/base.py:256[ERROR] - Internal Server Error: /group/usergroup/
+Traceback (most recent call last):
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/views/generic/base.py", line 89, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/root/python27/devopsenv/opsweb/dashboard/user/group.py", line 96, in post
+    return JsonResponse(ret, save=True)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/http/response.py", line 536, in __init__
+    super(JsonResponse, self).__init__(content=data, **kwargs)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/http/response.py", line 340, in __init__
+    super(HttpResponse, self).__init__(*args, **kwargs)
+TypeError: __init__() got an unexpected keyword argument 'save'
+2018-03-28 06:44:39,650 - /root/python27/devopsenv/lib/python2.7/site-packages/django/core/handlers/base.py:256[ERROR] - Internal Server Error: /group/delgroup/
+Traceback (most recent call last):
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/views/generic/base.py", line 89, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/root/python27/devopsenv/opsweb/dashboard/user/group.py", line 123, in post
+    return JsonResponse(ret, save=True)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/http/response.py", line 536, in __init__
+    super(JsonResponse, self).__init__(content=data, **kwargs)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/http/response.py", line 340, in __init__
+    super(HttpResponse, self).__init__(*args, **kwargs)
+TypeError: __init__() got an unexpected keyword argument 'save'
+2018-03-28 06:44:46,622 - /root/python27/devopsenv/lib/python2.7/site-packages/django/core/handlers/base.py:256[ERROR] - Internal Server Error: /group/usergroup/
+Traceback (most recent call last):
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/views/generic/base.py", line 89, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/root/python27/devopsenv/opsweb/dashboard/user/group.py", line 96, in post
+    return JsonResponse(ret, save=True)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/http/response.py", line 536, in __init__
+    super(JsonResponse, self).__init__(content=data, **kwargs)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/http/response.py", line 340, in __init__
+    super(HttpResponse, self).__init__(*args, **kwargs)
+TypeError: __init__() got an unexpected keyword argument 'save'
+2018-03-28 06:49:15,794 - /root/python27/devopsenv/lib/python2.7/site-packages/django/core/handlers/base.py:256[ERROR] - Internal Server Error: /user/modifyphone/
+Traceback (most recent call last):
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/views/generic/base.py", line 89, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/root/python27/devopsenv/opsweb/dashboard/user/__init__.py", line 140, in post
+    user_obj.profile.save()
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/db/models/base.py", line 734, in save
+    force_update=force_update, update_fields=update_fields)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/db/models/base.py", line 762, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/db/models/base.py", line 827, in _save_table
+    forced_update)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/db/models/base.py", line 877, in _do_update
+    return filtered._update(values) > 0
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/db/models/query.py", line 580, in _update
+    return query.get_compiler(self.db).execute_sql(CURSOR)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/db/models/sql/compiler.py", line 1062, in execute_sql
+    cursor = super(SQLUpdateCompiler, self).execute_sql(result_type)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/db/models/sql/compiler.py", line 840, in execute_sql
+    cursor.execute(sql, params)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/db/backends/utils.py", line 79, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/db/utils.py", line 98, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/db/backends/mysql/base.py", line 124, in execute
+    return self.cursor.execute(query, args)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/MySQLdb/cursors.py", line 205, in execute
+    self.errorhandler(self, exc, value)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/MySQLdb/connections.py", line 36, in defaulterrorhandler
+    raise errorclass, errorvalue
+DataError: (1406, "Data too long for column 'phone' at row 1")
+2018-03-28 06:49:16,270 - /root/python27/devopsenv/lib/python2.7/site-packages/django/core/handlers/base.py:170[WARNING] - Not Found: /favicon.ico
+2018-03-28 06:52:20,114 - /root/python27/devopsenv/lib/python2.7/site-packages/django/core/handlers/base.py:256[ERROR] - Internal Server Error: /group/usergroup/
+Traceback (most recent call last):
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/views/generic/base.py", line 89, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/root/python27/devopsenv/opsweb/dashboard/user/group.py", line 96, in post
+    return JsonResponse(ret, save=True)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/http/response.py", line 536, in __init__
+    super(JsonResponse, self).__init__(content=data, **kwargs)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/http/response.py", line 340, in __init__
+    super(HttpResponse, self).__init__(*args, **kwargs)
+TypeError: __init__() got an unexpected keyword argument 'save'
+2018-03-28 06:53:31,434 - /root/python27/devopsenv/lib/python2.7/site-packages/django/core/handlers/base.py:256[ERROR] - Internal Server Error: /group/usergroup/
+Traceback (most recent call last):
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/views/generic/base.py", line 89, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/root/python27/devopsenv/opsweb/dashboard/user/group.py", line 96, in post
+    return JsonResponse(ret, save=True)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/http/response.py", line 536, in __init__
+    super(JsonResponse, self).__init__(content=data, **kwargs)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/http/response.py", line 340, in __init__
+    super(HttpResponse, self).__init__(*args, **kwargs)
+TypeError: __init__() got an unexpected keyword argument 'save'
+2018-03-28 06:54:01,303 - /root/python27/devopsenv/lib/python2.7/site-packages/django/core/handlers/base.py:256[ERROR] - Internal Server Error: /group/delgroup/
+Traceback (most recent call last):
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/views/generic/base.py", line 89, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/root/python27/devopsenv/opsweb/dashboard/user/group.py", line 123, in post
+    return JsonResponse(ret, save=True)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/http/response.py", line 536, in __init__
+    super(JsonResponse, self).__init__(content=data, **kwargs)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/http/response.py", line 340, in __init__
+    super(HttpResponse, self).__init__(*args, **kwargs)
+TypeError: __init__() got an unexpected keyword argument 'save'
+2018-03-28 07:16:35,426 - /root/python27/devopsenv/lib/python2.7/site-packages/django/core/handlers/base.py:256[ERROR] - Internal Server Error: /group/usergroup/
+Traceback (most recent call last):
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/views/generic/base.py", line 89, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/root/python27/devopsenv/opsweb/dashboard/user/group.py", line 96, in post
+    return JsonResponse(ret, save=True)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/http/response.py", line 536, in __init__
+    super(JsonResponse, self).__init__(content=data, **kwargs)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/http/response.py", line 340, in __init__
+    super(HttpResponse, self).__init__(*args, **kwargs)
+TypeError: __init__() got an unexpected keyword argument 'save'
+2018-03-28 07:16:44,048 - /root/python27/devopsenv/lib/python2.7/site-packages/django/core/handlers/base.py:256[ERROR] - Internal Server Error: /group/delgroup/
+Traceback (most recent call last):
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/views/generic/base.py", line 89, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/root/python27/devopsenv/opsweb/dashboard/user/group.py", line 123, in post
+    return JsonResponse(ret, save=True)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/http/response.py", line 536, in __init__
+    super(JsonResponse, self).__init__(content=data, **kwargs)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/http/response.py", line 340, in __init__
+    super(HttpResponse, self).__init__(*args, **kwargs)
+TypeError: __init__() got an unexpected keyword argument 'save'
+2018-03-28 07:30:36,814 - /root/python27/devopsenv/lib/python2.7/site-packages/django/core/handlers/base.py:256[ERROR] - Internal Server Error: /group/usergroup/
+Traceback (most recent call last):
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/views/generic/base.py", line 89, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/root/python27/devopsenv/opsweb/dashboard/user/group.py", line 96, in post
+    return JsonResponse(ret, save=True)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/http/response.py", line 536, in __init__
+    super(JsonResponse, self).__init__(content=data, **kwargs)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/http/response.py", line 340, in __init__
+    super(HttpResponse, self).__init__(*args, **kwargs)
+TypeError: __init__() got an unexpected keyword argument 'save'
+2018-03-28 07:30:44,037 - /root/python27/devopsenv/lib/python2.7/site-packages/django/core/handlers/base.py:256[ERROR] - Internal Server Error: /group/delgroup/
+Traceback (most recent call last):
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/views/generic/base.py", line 89, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/root/python27/devopsenv/opsweb/dashboard/user/group.py", line 123, in post
+    return JsonResponse(ret, save=True)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/http/response.py", line 536, in __init__
+    super(JsonResponse, self).__init__(content=data, **kwargs)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/http/response.py", line 340, in __init__
+    super(HttpResponse, self).__init__(*args, **kwargs)
+TypeError: __init__() got an unexpected keyword argument 'save'
+2018-03-28 08:36:07,373 - /root/python27/devopsenv/lib/python2.7/site-packages/django/core/handlers/base.py:256[ERROR] - Internal Server Error: /group/usergroup/
+Traceback (most recent call last):
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/views/generic/base.py", line 89, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/root/python27/devopsenv/opsweb/dashboard/user/group.py", line 96, in post
+    return JsonResponse(ret, save=True)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/http/response.py", line 536, in __init__
+    super(JsonResponse, self).__init__(content=data, **kwargs)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/http/response.py", line 340, in __init__
+    super(HttpResponse, self).__init__(*args, **kwargs)
+TypeError: __init__() got an unexpected keyword argument 'save'
+2018-03-28 08:36:28,903 - /root/python27/devopsenv/lib/python2.7/site-packages/django/core/handlers/base.py:256[ERROR] - Internal Server Error: /group/delgroup/
+Traceback (most recent call last):
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/views/generic/base.py", line 89, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/root/python27/devopsenv/opsweb/dashboard/user/group.py", line 123, in post
+    return JsonResponse(ret, save=True)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/http/response.py", line 536, in __init__
+    super(JsonResponse, self).__init__(content=data, **kwargs)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/http/response.py", line 340, in __init__
+    super(HttpResponse, self).__init__(*args, **kwargs)
+TypeError: __init__() got an unexpected keyword argument 'save'
+2018-03-28 08:37:55,100 - /root/python27/devopsenv/lib/python2.7/site-packages/django/core/handlers/base.py:256[ERROR] - Internal Server Error: /group/usergroup/
+Traceback (most recent call last):
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/views/generic/base.py", line 89, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/root/python27/devopsenv/opsweb/dashboard/user/group.py", line 96, in post
+    return JsonResponse(ret, save=False)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/http/response.py", line 536, in __init__
+    super(JsonResponse, self).__init__(content=data, **kwargs)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/http/response.py", line 340, in __init__
+    super(HttpResponse, self).__init__(*args, **kwargs)
+TypeError: __init__() got an unexpected keyword argument 'save'
+2018-03-28 08:38:14,044 - /root/python27/devopsenv/lib/python2.7/site-packages/django/core/handlers/base.py:256[ERROR] - Internal Server Error: /group/delgroup/
+Traceback (most recent call last):
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/views/generic/base.py", line 89, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/root/python27/devopsenv/opsweb/dashboard/user/group.py", line 123, in post
+    return JsonResponse(ret, save=True)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/http/response.py", line 536, in __init__
+    super(JsonResponse, self).__init__(content=data, **kwargs)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/http/response.py", line 340, in __init__
+    super(HttpResponse, self).__init__(*args, **kwargs)
+TypeError: __init__() got an unexpected keyword argument 'save'
+2018-03-28 08:42:32,558 - /root/python27/devopsenv/lib/python2.7/site-packages/django/core/handlers/base.py:256[ERROR] - Internal Server Error: /group/usergroup/
+Traceback (most recent call last):
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/views/generic/base.py", line 89, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/root/python27/devopsenv/opsweb/dashboard/user/group.py", line 97, in post
+    return JsonResponse(ret, save=True)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/http/response.py", line 536, in __init__
+    super(JsonResponse, self).__init__(content=data, **kwargs)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/http/response.py", line 340, in __init__
+    super(HttpResponse, self).__init__(*args, **kwargs)
+TypeError: __init__() got an unexpected keyword argument 'save'
+2018-03-28 08:46:08,563 - /root/python27/devopsenv/lib/python2.7/site-packages/django/core/handlers/base.py:256[ERROR] - Internal Server Error: /group/usergroup/
+Traceback (most recent call last):
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/views/generic/base.py", line 89, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/root/python27/devopsenv/opsweb/dashboard/user/group.py", line 97, in post
+    return JsonResponse(ret, save=True)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/http/response.py", line 536, in __init__
+    super(JsonResponse, self).__init__(content=data, **kwargs)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/http/response.py", line 340, in __init__
+    super(HttpResponse, self).__init__(*args, **kwargs)
+TypeError: __init__() got an unexpected keyword argument 'save'
+2018-03-28 08:46:21,017 - /root/python27/devopsenv/lib/python2.7/site-packages/django/core/handlers/base.py:256[ERROR] - Internal Server Error: /group/delgroup/
+Traceback (most recent call last):
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/views/generic/base.py", line 89, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/root/python27/devopsenv/opsweb/dashboard/user/group.py", line 124, in post
+    return JsonResponse(ret, save=True)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/http/response.py", line 536, in __init__
+    super(JsonResponse, self).__init__(content=data, **kwargs)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/http/response.py", line 340, in __init__
+    super(HttpResponse, self).__init__(*args, **kwargs)
+TypeError: __init__() got an unexpected keyword argument 'save'
+2018-03-28 08:46:27,297 - /root/python27/devopsenv/lib/python2.7/site-packages/django/core/handlers/base.py:256[ERROR] - Internal Server Error: /group/delgroup/
+Traceback (most recent call last):
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/views/generic/base.py", line 89, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/root/python27/devopsenv/opsweb/dashboard/user/group.py", line 124, in post
+    return JsonResponse(ret, save=True)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/http/response.py", line 536, in __init__
+    super(JsonResponse, self).__init__(content=data, **kwargs)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/http/response.py", line 340, in __init__
+    super(HttpResponse, self).__init__(*args, **kwargs)
+TypeError: __init__() got an unexpected keyword argument 'save'
+2018-03-28 08:49:38,383 - /root/python27/devopsenv/lib/python2.7/site-packages/django/core/handlers/base.py:256[ERROR] - Internal Server Error: /group/delgroup/
+Traceback (most recent call last):
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/views/generic/base.py", line 89, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/root/python27/devopsenv/opsweb/dashboard/user/group.py", line 124, in post
+    return JsonResponse(ret, save=True)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/http/response.py", line 536, in __init__
+    super(JsonResponse, self).__init__(content=data, **kwargs)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/http/response.py", line 340, in __init__
+    super(HttpResponse, self).__init__(*args, **kwargs)
+TypeError: __init__() got an unexpected keyword argument 'save'
+2018-03-28 08:53:52,227 - /root/python27/devopsenv/lib/python2.7/site-packages/django/core/handlers/base.py:170[WARNING] - Not Found: /server/list/
+2018-03-28 08:53:52,280 - /root/python27/devopsenv/lib/python2.7/site-packages/django/core/handlers/base.py:170[WARNING] - Not Found: /favicon.ico
+2018-03-28 08:54:03,626 - /root/python27/devopsenv/lib/python2.7/site-packages/django/core/handlers/base.py:170[WARNING] - Not Found: /monitor/zabbix/hostrsync/
+2018-03-28 08:54:25,058 - /root/python27/devopsenv/lib/python2.7/site-packages/django/core/handlers/base.py:170[WARNING] - Not Found: /monitor/zabbix/linktemplate/
+2018-03-28 09:00:04,543 - /root/python27/devopsenv/lib/python2.7/site-packages/django/core/handlers/base.py:256[ERROR] - Internal Server Error: /user/modifydepartment/
+Traceback (most recent call last):
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/views/generic/base.py", line 89, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/utils/decorators.py", line 34, in _wrapper
+    return bound_func(*args, **kwargs)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/contrib/auth/decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/utils/decorators.py", line 30, in bound_func
+    return func.__get__(self, type(self))(*args2, **kwargs2)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/utils/decorators.py", line 34, in _wrapper
+    return bound_func(*args, **kwargs)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/contrib/auth/decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/utils/decorators.py", line 30, in bound_func
+    return func.__get__(self, type(self))(*args2, **kwargs2)
+  File "/root/python27/devopsenv/opsweb/dashboard/user/__init__.py", line 113, in post
+    user_obj.profile.department = department_obj
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/db/models/fields/related.py", line 480, in __get__
+    self.related.get_accessor_name()
+RelatedObjectDoesNotExist: User has no profile.
+2018-03-28 09:00:05,046 - /root/python27/devopsenv/lib/python2.7/site-packages/django/core/handlers/base.py:170[WARNING] - Not Found: /favicon.ico
+2018-03-28 09:00:25,164 - /root/python27/devopsenv/lib/python2.7/site-packages/django/core/handlers/base.py:256[ERROR] - Internal Server Error: /user/modifydepartment/
+Traceback (most recent call last):
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/views/generic/base.py", line 89, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/utils/decorators.py", line 34, in _wrapper
+    return bound_func(*args, **kwargs)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/contrib/auth/decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/utils/decorators.py", line 30, in bound_func
+    return func.__get__(self, type(self))(*args2, **kwargs2)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/utils/decorators.py", line 34, in _wrapper
+    return bound_func(*args, **kwargs)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/contrib/auth/decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/utils/decorators.py", line 30, in bound_func
+    return func.__get__(self, type(self))(*args2, **kwargs2)
+  File "/root/python27/devopsenv/opsweb/dashboard/user/__init__.py", line 113, in post
+    user_obj.profile.department = department_obj
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/db/models/fields/related.py", line 480, in __get__
+    self.related.get_accessor_name()
+RelatedObjectDoesNotExist: User has no profile.
+2018-03-28 09:04:12,575 - /root/python27/devopsenv/lib/python2.7/site-packages/django/core/handlers/base.py:256[ERROR] - Internal Server Error: /user/modifydepartment/
+Traceback (most recent call last):
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/views/generic/base.py", line 89, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/utils/decorators.py", line 34, in _wrapper
+    return bound_func(*args, **kwargs)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/contrib/auth/decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/utils/decorators.py", line 30, in bound_func
+    return func.__get__(self, type(self))(*args2, **kwargs2)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/utils/decorators.py", line 34, in _wrapper
+    return bound_func(*args, **kwargs)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/contrib/auth/decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/utils/decorators.py", line 30, in bound_func
+    return func.__get__(self, type(self))(*args2, **kwargs2)
+  File "/root/python27/devopsenv/opsweb/dashboard/user/__init__.py", line 113, in post
+    user_obj.profile.department = department_obj
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/db/models/fields/related.py", line 480, in __get__
+    self.related.get_accessor_name()
+RelatedObjectDoesNotExist: User has no profile.
+2018-03-28 15:19:11,401 - /root/python27/devopsenv/lib/python2.7/site-packages/django/core/handlers/base.py:256[ERROR] - Internal Server Error: /group/usergroup/
+Traceback (most recent call last):
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/views/generic/base.py", line 89, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/root/python27/devopsenv/opsweb/dashboard/user/group.py", line 82, in get
+    user_list = [{"username":user.username, "email":user.email, "cn_name":user.profile.name} for user in users]
+AttributeError: 'Profile' object has no attribute 'name'
+2018-03-28 15:19:11,741 - /root/python27/devopsenv/lib/python2.7/site-packages/django/core/handlers/base.py:170[WARNING] - Not Found: /favicon.ico
+2018-03-29 15:37:12,298 - /root/python27/devopsenv/lib/python2.7/site-packages/django/core/handlers/base.py:170[WARNING] - Not Found: /group/permission/
+2018-03-29 15:37:12,388 - /root/python27/devopsenv/lib/python2.7/site-packages/django/core/handlers/base.py:170[WARNING] - Not Found: /favicon.ico
+2018-04-08 14:28:06,340 - /root/python27/devopsenv/lib/python2.7/site-packages/django/core/handlers/base.py:256[ERROR] - Internal Server Error: /group/permissions/
+Traceback (most recent call last):
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/views/generic/base.py", line 89, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/views/generic/list.py", line 159, in get
+    self.object_list = self.get_queryset()
+  File "/root/python27/devopsenv/opsweb/dashboard/user/group.py", line 206, in get_queryset
+    gid = request.GET.get('gid', 0)
+NameError: global name 'request' is not defined
+2018-04-08 14:40:57,329 - /root/python27/devopsenv/lib/python2.7/site-packages/django/core/handlers/base.py:256[ERROR] - Internal Server Error: /group/permissions/
+Traceback (most recent call last):
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/core/handlers/base.py", line 164, in get_response
+    response = response.render()
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/template/response.py", line 158, in render
+    self.content = self.rendered_content
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/template/response.py", line 133, in rendered_content
+    template = self._resolve_template(self.template_name)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/template/response.py", line 88, in _resolve_template
+    new_template = self.resolve_template(template)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/template/response.py", line 78, in resolve_template
+    return loader.select_template(template, using=self.using)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/template/loader.py", line 64, in select_template
+    return engine.get_template(template_name, dirs)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/template/backends/django.py", line 30, in get_template
+    return Template(self.engine.get_template(template_name, dirs))
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/template/engine.py", line 167, in get_template
+    template, origin = self.find_template(template_name, dirs)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/template/engine.py", line 141, in find_template
+    source, display_name = loader(name, dirs)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/template/loaders/base.py", line 13, in __call__
+    return self.load_template(template_name, template_dirs)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/template/loaders/base.py", line 23, in load_template
+    template = Template(source, origin, template_name, self.engine)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/template/base.py", line 191, in __init__
+    self.nodelist = engine.compile_string(template_string, origin)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/template/engine.py", line 261, in compile_string
+    return parser.parse()
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/template/base.py", line 342, in parse
+    compiled_result = compile_func(self, token)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/template/loader_tags.py", line 210, in do_extends
+    nodelist = parser.parse()
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/template/base.py", line 342, in parse
+    compiled_result = compile_func(self, token)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/template/loader_tags.py", line 184, in do_block
+    nodelist = parser.parse(('endblock',))
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/template/base.py", line 342, in parse
+    compiled_result = compile_func(self, token)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/template/defaulttags.py", line 872, in do_for
+    nodelist_loop = parser.parse(('empty', 'endfor',))
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/template/base.py", line 340, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/template/base.py", line 395, in invalid_block_tag
+    (command, get_text_list(["'%s'" % p for p in parse_until])))
+TemplateSyntaxError: Invalid block tag: 'endblock', expected 'empty' or 'endfor'
+2018-04-08 14:44:02,102 - /root/python27/devopsenv/lib/python2.7/site-packages/django/core/handlers/base.py:256[ERROR] - Internal Server Error: /group/permissions/
+Traceback (most recent call last):
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/core/handlers/base.py", line 164, in get_response
+    response = response.render()
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/template/response.py", line 158, in render
+    self.content = self.rendered_content
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/template/response.py", line 133, in rendered_content
+    template = self._resolve_template(self.template_name)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/template/response.py", line 88, in _resolve_template
+    new_template = self.resolve_template(template)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/template/response.py", line 78, in resolve_template
+    return loader.select_template(template, using=self.using)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/template/loader.py", line 64, in select_template
+    return engine.get_template(template_name, dirs)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/template/backends/django.py", line 30, in get_template
+    return Template(self.engine.get_template(template_name, dirs))
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/template/engine.py", line 167, in get_template
+    template, origin = self.find_template(template_name, dirs)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/template/engine.py", line 141, in find_template
+    source, display_name = loader(name, dirs)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/template/loaders/base.py", line 13, in __call__
+    return self.load_template(template_name, template_dirs)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/template/loaders/base.py", line 23, in load_template
+    template = Template(source, origin, template_name, self.engine)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/template/base.py", line 191, in __init__
+    self.nodelist = engine.compile_string(template_string, origin)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/template/engine.py", line 261, in compile_string
+    return parser.parse()
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/template/base.py", line 342, in parse
+    compiled_result = compile_func(self, token)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/template/loader_tags.py", line 210, in do_extends
+    nodelist = parser.parse()
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/template/base.py", line 342, in parse
+    compiled_result = compile_func(self, token)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/template/loader_tags.py", line 184, in do_block
+    nodelist = parser.parse(('endblock',))
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/template/base.py", line 342, in parse
+    compiled_result = compile_func(self, token)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/template/defaulttags.py", line 863, in do_for
+    " 'for x in y': %s" % token.contents)
+TemplateSyntaxError: 'for' statements should use the format 'for x in y': for permission in object_list \u5982\u679c\u540e\u7aef\u4f7f\u7528listview\u7684\u8bdd\u5c31\u662f\u904d\u5386object_list
+2018-04-08 14:44:56,824 - /root/python27/devopsenv/lib/python2.7/site-packages/django/core/handlers/base.py:256[ERROR] - Internal Server Error: /group/permissions/
+Traceback (most recent call last):
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/core/handlers/base.py", line 164, in get_response
+    response = response.render()
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/template/response.py", line 158, in render
+    self.content = self.rendered_content
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/template/response.py", line 133, in rendered_content
+    template = self._resolve_template(self.template_name)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/template/response.py", line 88, in _resolve_template
+    new_template = self.resolve_template(template)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/template/response.py", line 78, in resolve_template
+    return loader.select_template(template, using=self.using)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/template/loader.py", line 64, in select_template
+    return engine.get_template(template_name, dirs)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/template/backends/django.py", line 30, in get_template
+    return Template(self.engine.get_template(template_name, dirs))
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/template/engine.py", line 167, in get_template
+    template, origin = self.find_template(template_name, dirs)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/template/engine.py", line 141, in find_template
+    source, display_name = loader(name, dirs)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/template/loaders/base.py", line 13, in __call__
+    return self.load_template(template_name, template_dirs)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/template/loaders/base.py", line 23, in load_template
+    template = Template(source, origin, template_name, self.engine)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/template/base.py", line 191, in __init__
+    self.nodelist = engine.compile_string(template_string, origin)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/template/engine.py", line 261, in compile_string
+    return parser.parse()
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/template/base.py", line 342, in parse
+    compiled_result = compile_func(self, token)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/template/loader_tags.py", line 210, in do_extends
+    nodelist = parser.parse()
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/template/base.py", line 342, in parse
+    compiled_result = compile_func(self, token)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/template/loader_tags.py", line 184, in do_block
+    nodelist = parser.parse(('endblock',))
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/template/base.py", line 342, in parse
+    compiled_result = compile_func(self, token)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/template/defaulttags.py", line 872, in do_for
+    nodelist_loop = parser.parse(('empty', 'endfor',))
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/template/base.py", line 340, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/template/base.py", line 395, in invalid_block_tag
+    (command, get_text_list(["'%s'" % p for p in parse_until])))
+TemplateSyntaxError: Invalid block tag: 'endblock', expected 'empty' or 'endfor'
+2018-04-08 14:45:56,503 - /root/python27/devopsenv/lib/python2.7/site-packages/django/core/handlers/base.py:256[ERROR] - Internal Server Error: /group/permissions/
+Traceback (most recent call last):
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/core/handlers/base.py", line 164, in get_response
+    response = response.render()
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/template/response.py", line 158, in render
+    self.content = self.rendered_content
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/template/response.py", line 133, in rendered_content
+    template = self._resolve_template(self.template_name)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/template/response.py", line 88, in _resolve_template
+    new_template = self.resolve_template(template)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/template/response.py", line 78, in resolve_template
+    return loader.select_template(template, using=self.using)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/template/loader.py", line 64, in select_template
+    return engine.get_template(template_name, dirs)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/template/backends/django.py", line 30, in get_template
+    return Template(self.engine.get_template(template_name, dirs))
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/template/engine.py", line 167, in get_template
+    template, origin = self.find_template(template_name, dirs)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/template/engine.py", line 141, in find_template
+    source, display_name = loader(name, dirs)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/template/loaders/base.py", line 13, in __call__
+    return self.load_template(template_name, template_dirs)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/template/loaders/base.py", line 23, in load_template
+    template = Template(source, origin, template_name, self.engine)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/template/base.py", line 191, in __init__
+    self.nodelist = engine.compile_string(template_string, origin)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/template/engine.py", line 261, in compile_string
+    return parser.parse()
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/template/base.py", line 342, in parse
+    compiled_result = compile_func(self, token)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/template/loader_tags.py", line 210, in do_extends
+    nodelist = parser.parse()
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/template/base.py", line 342, in parse
+    compiled_result = compile_func(self, token)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/template/defaulttags.py", line 872, in do_for
+    nodelist_loop = parser.parse(('empty', 'endfor',))
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/template/base.py", line 349, in parse
+    self.unclosed_block_tag(parse_until)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/template/debug.py", line 65, in unclosed_block_tag
+    raise self.source_error(source, msg)
+TemplateSyntaxError: Unclosed tag 'for'. Looking for one of: empty, endfor 
+2018-04-08 14:46:24,561 - /root/python27/devopsenv/lib/python2.7/site-packages/django/core/handlers/base.py:256[ERROR] - Internal Server Error: /group/permissions/
+Traceback (most recent call last):
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/core/handlers/base.py", line 164, in get_response
+    response = response.render()
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/template/response.py", line 158, in render
+    self.content = self.rendered_content
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/template/response.py", line 133, in rendered_content
+    template = self._resolve_template(self.template_name)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/template/response.py", line 88, in _resolve_template
+    new_template = self.resolve_template(template)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/template/response.py", line 78, in resolve_template
+    return loader.select_template(template, using=self.using)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/template/loader.py", line 64, in select_template
+    return engine.get_template(template_name, dirs)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/template/backends/django.py", line 30, in get_template
+    return Template(self.engine.get_template(template_name, dirs))
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/template/engine.py", line 167, in get_template
+    template, origin = self.find_template(template_name, dirs)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/template/engine.py", line 141, in find_template
+    source, display_name = loader(name, dirs)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/template/loaders/base.py", line 13, in __call__
+    return self.load_template(template_name, template_dirs)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/template/loaders/base.py", line 23, in load_template
+    template = Template(source, origin, template_name, self.engine)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/template/base.py", line 191, in __init__
+    self.nodelist = engine.compile_string(template_string, origin)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/template/engine.py", line 261, in compile_string
+    return parser.parse()
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/template/base.py", line 342, in parse
+    compiled_result = compile_func(self, token)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/template/loader_tags.py", line 210, in do_extends
+    nodelist = parser.parse()
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/template/base.py", line 342, in parse
+    compiled_result = compile_func(self, token)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/template/defaulttags.py", line 872, in do_for
+    nodelist_loop = parser.parse(('empty', 'endfor',))
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/template/base.py", line 349, in parse
+    self.unclosed_block_tag(parse_until)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/template/debug.py", line 65, in unclosed_block_tag
+    raise self.source_error(source, msg)
+TemplateSyntaxError: Unclosed tag 'for'. Looking for one of: empty, endfor 
+2018-04-08 14:47:03,248 - /root/python27/devopsenv/lib/python2.7/site-packages/django/core/handlers/base.py:256[ERROR] - Internal Server Error: /group/permissions/
+Traceback (most recent call last):
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/core/handlers/base.py", line 164, in get_response
+    response = response.render()
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/template/response.py", line 158, in render
+    self.content = self.rendered_content
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/template/response.py", line 133, in rendered_content
+    template = self._resolve_template(self.template_name)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/template/response.py", line 88, in _resolve_template
+    new_template = self.resolve_template(template)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/template/response.py", line 78, in resolve_template
+    return loader.select_template(template, using=self.using)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/template/loader.py", line 64, in select_template
+    return engine.get_template(template_name, dirs)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/template/backends/django.py", line 30, in get_template
+    return Template(self.engine.get_template(template_name, dirs))
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/template/engine.py", line 167, in get_template
+    template, origin = self.find_template(template_name, dirs)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/template/engine.py", line 141, in find_template
+    source, display_name = loader(name, dirs)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/template/loaders/base.py", line 13, in __call__
+    return self.load_template(template_name, template_dirs)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/template/loaders/base.py", line 23, in load_template
+    template = Template(source, origin, template_name, self.engine)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/template/base.py", line 191, in __init__
+    self.nodelist = engine.compile_string(template_string, origin)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/template/engine.py", line 261, in compile_string
+    return parser.parse()
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/template/base.py", line 342, in parse
+    compiled_result = compile_func(self, token)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/template/loader_tags.py", line 210, in do_extends
+    nodelist = parser.parse()
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/template/base.py", line 342, in parse
+    compiled_result = compile_func(self, token)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/template/loader_tags.py", line 184, in do_block
+    nodelist = parser.parse(('endblock',))
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/template/base.py", line 342, in parse
+    compiled_result = compile_func(self, token)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/template/defaulttags.py", line 872, in do_for
+    nodelist_loop = parser.parse(('empty', 'endfor',))
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/template/base.py", line 340, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/template/base.py", line 395, in invalid_block_tag
+    (command, get_text_list(["'%s'" % p for p in parse_until])))
+TemplateSyntaxError: Invalid block tag: 'endblock', expected 'empty' or 'endfor'
+2018-04-09 12:24:14,007 - /root/python27/devopsenv/lib/python2.7/site-packages/django/core/handlers/base.py:170[WARNING] - Not Found: /server/list/
+2018-04-09 12:24:27,326 - /root/python27/devopsenv/lib/python2.7/site-packages/django/core/handlers/base.py:170[WARNING] - Not Found: /product/manage/
+2018-04-09 12:24:45,761 - /root/python27/devopsenv/lib/python2.7/site-packages/django/core/handlers/base.py:170[WARNING] - Not Found: /product/manage/
+2018-04-09 12:24:54,356 - /root/python27/devopsenv/lib/python2.7/site-packages/django/core/handlers/base.py:170[WARNING] - Not Found: /server/list/
+2018-04-09 12:25:03,526 - /root/python27/devopsenv/lib/python2.7/site-packages/django/core/handlers/base.py:170[WARNING] - Not Found: /product/manage/
+2018-04-09 12:42:13,989 - /root/python27/devopsenv/lib/python2.7/site-packages/django/core/handlers/base.py:170[WARNING] - Not Found: /server/list/
+2018-04-09 13:18:21,310 - /root/python27/devopsenv/lib/python2.7/site-packages/django/core/handlers/base.py:170[WARNING] - Not Found: /server/list/
+2018-04-09 14:58:03,774 - /root/python27/devopsenv/lib/python2.7/site-packages/django/core/handlers/base.py:170[WARNING] - Not Found: /idclist
+2018-04-11 11:16:09,392 - /root/python27/devopsenv/lib/python2.7/site-packages/django/core/handlers/base.py:256[ERROR] - Internal Server Error: /user/modifydepartment/
+Traceback (most recent call last):
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/views/generic/base.py", line 89, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/utils/decorators.py", line 34, in _wrapper
+    return bound_func(*args, **kwargs)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/contrib/auth/decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/utils/decorators.py", line 30, in bound_func
+    return func.__get__(self, type(self))(*args2, **kwargs2)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/utils/decorators.py", line 34, in _wrapper
+    return bound_func(*args, **kwargs)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/contrib/auth/decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/utils/decorators.py", line 30, in bound_func
+    return func.__get__(self, type(self))(*args2, **kwargs2)
+  File "/root/python27/devopsenv/opsweb/dashboard/user/__init__.py", line 113, in post
+    user_obj.profile.department = department_obj
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/db/models/fields/related.py", line 480, in __get__
+    self.related.get_accessor_name()
+RelatedObjectDoesNotExist: User has no profile.
+2018-04-11 11:18:28,891 - /root/python27/devopsenv/lib/python2.7/site-packages/django/core/handlers/base.py:256[ERROR] - Internal Server Error: /user/modifyphone/
+Traceback (most recent call last):
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/views/generic/base.py", line 89, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/root/python27/devopsenv/opsweb/dashboard/user/__init__.py", line 136, in post
+    user_obj.profile.phone = request.POST.get('phone', None)
+  File "/root/python27/devopsenv/lib/python2.7/site-packages/django/db/models/fields/related.py", line 480, in __get__
+    self.related.get_accessor_name()
+RelatedObjectDoesNotExist: User has no profile.
+2018-04-11 12:22:00,279 - /root/python27/devopsenv/lib/python2.7/site-packages/django/core/handlers/base.py:170[WARNING] - Not Found: /apple-touch-icon-precomposed.png
+2018-04-11 12:22:00,310 - /root/python27/devopsenv/lib/python2.7/site-packages/django/core/handlers/base.py:170[WARNING] - Not Found: /apple-touch-icon.png
+2018-04-11 12:22:28,867 - /root/python27/devopsenv/lib/python2.7/site-packages/django/core/handlers/base.py:170[WARNING] - Not Found: /apple-touch-icon-precomposed.png
+2018-04-11 12:22:28,897 - /root/python27/devopsenv/lib/python2.7/site-packages/django/core/handlers/base.py:170[WARNING] - Not Found: /apple-touch-icon.png
+2018-04-11 12:34:48,197 - /root/python27/devopsenv/lib/python2.7/site-packages/django/core/handlers/base.py:170[WARNING] - Not Found: /favicon.ico
+2018-04-11 12:37:00,018 - /root/python27/devopsenv/lib/python2.7/site-packages/django/core/handlers/base.py:170[WARNING] - Not Found: /favicon.ico
+2018-04-11 14:53:22,850 - /root/python27/devopsenv/lib/python2.7/site-packages/django/core/handlers/base.py:170[WARNING] - Not Found: /HNAP1
+2018-04-12 11:25:15,226 - /root/python27/devopsenv/lib/python2.7/site-packages/django/core/handlers/base.py:170[WARNING] - Not Found: /favicon.ico

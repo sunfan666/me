@@ -1,0 +1,93 @@
+2018-03-22 15:36:32,980 - /root/python27/devopsenv/opsweb/dashboard/views.py:49[ERROR] - index error
+2018-03-22 15:41:40,708 - /root/python27/devopsenv/opsweb/dashboard/views.py:49[ERROR] - 首页error测试
+2018-03-22 15:44:20,823 - /root/python27/devopsenv/opsweb/dashboard/views.py:49[ERROR] - 首页error测试
+2018-03-22 15:47:13,210 - /root/python27/devopsenv/opsweb/dashboard/views.py:49[ERROR] - 首页error测试
+2018-03-22 15:50:09,849 - /root/python27/devopsenv/lib/python2.7/site-packages/django/db/backends/utils.py:89[DEBUG] - (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-03-22 15:50:09,872 - /root/python27/devopsenv/lib/python2.7/site-packages/django/db/backends/utils.py:89[DEBUG] - (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-03-22 15:50:09,873 - /root/python27/devopsenv/lib/python2.7/site-packages/django/db/backends/utils.py:89[DEBUG] - (0.002) SHOW FULL TABLES; args=None
+2018-03-22 15:50:09,878 - /root/python27/devopsenv/lib/python2.7/site-packages/django/db/backends/utils.py:89[DEBUG] - (0.003) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2018-03-22 15:53:00,764 - /root/python27/devopsenv/lib/python2.7/site-packages/django/db/backends/utils.py:89[DEBUG] - (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-03-22 15:53:00,786 - /root/python27/devopsenv/lib/python2.7/site-packages/django/db/backends/utils.py:89[DEBUG] - (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-03-22 15:53:00,787 - /root/python27/devopsenv/lib/python2.7/site-packages/django/db/backends/utils.py:89[DEBUG] - (0.001) SHOW FULL TABLES; args=None
+2018-03-22 15:53:00,792 - /root/python27/devopsenv/lib/python2.7/site-packages/django/db/backends/utils.py:89[DEBUG] - (0.004) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2018-03-22 15:58:59,157 - /root/python27/devopsenv/lib/python2.7/site-packages/django/db/backends/utils.py:89[DEBUG] - (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-03-22 15:58:59,192 - /root/python27/devopsenv/lib/python2.7/site-packages/django/db/backends/utils.py:89[DEBUG] - (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-03-22 15:58:59,193 - /root/python27/devopsenv/lib/python2.7/site-packages/django/db/backends/utils.py:89[DEBUG] - (0.001) SHOW FULL TABLES; args=None
+2018-03-22 15:58:59,197 - /root/python27/devopsenv/lib/python2.7/site-packages/django/db/backends/utils.py:89[DEBUG] - (0.003) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2018-03-22 16:01:20,774 - /root/python27/devopsenv/opsweb/dashboard/views.py:49[ERROR] - 首页error测试
+2018-03-22 16:03:12,125 - /root/python27/devopsenv/opsweb/dashboard/views.py:49[ERROR] - 首页error测试
+2018-03-22 16:03:12,125 - /root/python27/devopsenv/opsweb/dashboard/views.py:50[DEBUG] - 首页debug测试
+2018-03-26 14:37:33,343 - /root/python27/devopsenv/opsweb/dashboard/views.py:53[ERROR] - 首页error测试
+2018-03-26 14:37:33,343 - /root/python27/devopsenv/opsweb/dashboard/views.py:54[DEBUG] - 首页debug测试
+2018-03-26 15:09:57,513 - /root/python27/devopsenv/opsweb/dashboard/views.py:55[ERROR] - 首页error测试
+2018-03-26 15:09:57,513 - /root/python27/devopsenv/opsweb/dashboard/views.py:56[DEBUG] - 首页debug测试
+2018-03-28 07:15:19,633 - /root/python27/devopsenv/opsweb/dashboard/views.py:55[ERROR] - 首页error测试
+2018-03-28 07:15:19,633 - /root/python27/devopsenv/opsweb/dashboard/views.py:56[DEBUG] - 首页debug测试
+2018-03-28 08:53:23,859 - /root/python27/devopsenv/opsweb/dashboard/views.py:55[ERROR] - 首页error测试
+2018-03-28 08:53:23,859 - /root/python27/devopsenv/opsweb/dashboard/views.py:56[DEBUG] - 首页debug测试
+2018-03-28 08:53:27,211 - /root/python27/devopsenv/opsweb/dashboard/views.py:55[ERROR] - 首页error测试
+2018-03-28 08:53:27,211 - /root/python27/devopsenv/opsweb/dashboard/views.py:56[DEBUG] - 首页debug测试
+2018-03-28 08:53:43,846 - /root/python27/devopsenv/opsweb/dashboard/views.py:55[ERROR] - 首页error测试
+2018-03-28 08:53:43,846 - /root/python27/devopsenv/opsweb/dashboard/views.py:56[DEBUG] - 首页debug测试
+2018-03-28 08:54:06,185 - /root/python27/devopsenv/opsweb/dashboard/views.py:55[ERROR] - 首页error测试
+2018-03-28 08:54:06,185 - /root/python27/devopsenv/opsweb/dashboard/views.py:56[DEBUG] - 首页debug测试
+2018-03-28 08:54:32,971 - /root/python27/devopsenv/opsweb/dashboard/views.py:55[ERROR] - 首页error测试
+2018-03-28 08:54:32,972 - /root/python27/devopsenv/opsweb/dashboard/views.py:56[DEBUG] - 首页debug测试
+2018-03-28 08:54:33,886 - /root/python27/devopsenv/opsweb/dashboard/views.py:55[ERROR] - 首页error测试
+2018-03-28 08:54:33,887 - /root/python27/devopsenv/opsweb/dashboard/views.py:56[DEBUG] - 首页debug测试
+2018-03-28 08:54:35,966 - /root/python27/devopsenv/opsweb/dashboard/views.py:55[ERROR] - 首页error测试
+2018-03-28 08:54:35,966 - /root/python27/devopsenv/opsweb/dashboard/views.py:56[DEBUG] - 首页debug测试
+2018-03-28 09:17:27,389 - /root/python27/devopsenv/opsweb/dashboard/views.py:55[ERROR] - 首页error测试
+2018-03-28 09:17:27,389 - /root/python27/devopsenv/opsweb/dashboard/views.py:56[DEBUG] - 首页debug测试
+2018-03-28 09:24:05,529 - /root/python27/devopsenv/opsweb/dashboard/views.py:55[ERROR] - 首页error测试
+2018-03-28 09:24:05,529 - /root/python27/devopsenv/opsweb/dashboard/views.py:56[DEBUG] - 首页debug测试
+2018-03-28 16:38:35,240 - /root/python27/devopsenv/opsweb/dashboard/views.py:55[ERROR] - 首页error测试
+2018-03-28 16:38:35,240 - /root/python27/devopsenv/opsweb/dashboard/views.py:56[DEBUG] - 首页debug测试
+2018-03-29 16:46:17,188 - /root/python27/devopsenv/opsweb/dashboard/views.py:55[ERROR] - 首页error测试
+2018-03-29 16:46:17,188 - /root/python27/devopsenv/opsweb/dashboard/views.py:56[DEBUG] - 首页debug测试
+2018-04-08 12:21:40,403 - /root/python27/devopsenv/opsweb/dashboard/views.py:55[ERROR] - 首页error测试
+2018-04-08 12:21:40,403 - /root/python27/devopsenv/opsweb/dashboard/views.py:56[DEBUG] - 首页debug测试
+2018-04-08 15:19:43,105 - /root/python27/devopsenv/opsweb/dashboard/views.py:55[ERROR] - 首页error测试
+2018-04-08 15:19:43,105 - /root/python27/devopsenv/opsweb/dashboard/views.py:56[DEBUG] - 首页debug测试
+2018-04-08 16:04:58,605 - /root/python27/devopsenv/opsweb/dashboard/views.py:55[ERROR] - 首页error测试
+2018-04-08 16:04:58,605 - /root/python27/devopsenv/opsweb/dashboard/views.py:56[DEBUG] - 首页debug测试
+2018-04-09 12:01:38,023 - /root/python27/devopsenv/opsweb/dashboard/views.py:55[ERROR] - 首页error测试
+2018-04-09 12:01:38,024 - /root/python27/devopsenv/opsweb/dashboard/views.py:56[DEBUG] - 首页debug测试
+2018-04-09 12:02:24,850 - /root/python27/devopsenv/opsweb/dashboard/views.py:55[ERROR] - 首页error测试
+2018-04-09 12:02:24,850 - /root/python27/devopsenv/opsweb/dashboard/views.py:56[DEBUG] - 首页debug测试
+2018-04-09 12:04:13,593 - /root/python27/devopsenv/opsweb/dashboard/views.py:55[ERROR] - 首页error测试
+2018-04-09 12:04:13,594 - /root/python27/devopsenv/opsweb/dashboard/views.py:56[DEBUG] - 首页debug测试
+2018-04-09 12:19:47,803 - /root/python27/devopsenv/opsweb/dashboard/views.py:55[ERROR] - 首页error测试
+2018-04-09 12:19:47,804 - /root/python27/devopsenv/opsweb/dashboard/views.py:56[DEBUG] - 首页debug测试
+2018-04-09 12:20:06,104 - /root/python27/devopsenv/opsweb/dashboard/views.py:55[ERROR] - 首页error测试
+2018-04-09 12:20:06,104 - /root/python27/devopsenv/opsweb/dashboard/views.py:56[DEBUG] - 首页debug测试
+2018-04-09 12:20:09,076 - /root/python27/devopsenv/opsweb/dashboard/views.py:55[ERROR] - 首页error测试
+2018-04-09 12:20:09,076 - /root/python27/devopsenv/opsweb/dashboard/views.py:56[DEBUG] - 首页debug测试
+2018-04-09 12:20:10,797 - /root/python27/devopsenv/opsweb/dashboard/views.py:55[ERROR] - 首页error测试
+2018-04-09 12:20:10,797 - /root/python27/devopsenv/opsweb/dashboard/views.py:56[DEBUG] - 首页debug测试
+2018-04-09 12:20:23,628 - /root/python27/devopsenv/opsweb/dashboard/views.py:55[ERROR] - 首页error测试
+2018-04-09 12:20:23,628 - /root/python27/devopsenv/opsweb/dashboard/views.py:56[DEBUG] - 首页debug测试
+2018-04-09 13:56:16,640 - /root/python27/devopsenv/opsweb/dashboard/views.py:55[ERROR] - 首页error测试
+2018-04-09 13:56:16,640 - /root/python27/devopsenv/opsweb/dashboard/views.py:56[DEBUG] - 首页debug测试
+2018-04-09 14:32:11,039 - /root/python27/devopsenv/opsweb/dashboard/views.py:55[ERROR] - 首页error测试
+2018-04-09 14:32:11,040 - /root/python27/devopsenv/opsweb/dashboard/views.py:56[DEBUG] - 首页debug测试
+2018-04-09 14:32:13,893 - /root/python27/devopsenv/opsweb/dashboard/views.py:55[ERROR] - 首页error测试
+2018-04-09 14:32:13,893 - /root/python27/devopsenv/opsweb/dashboard/views.py:56[DEBUG] - 首页debug测试
+2018-04-09 14:34:22,435 - /root/python27/devopsenv/opsweb/dashboard/views.py:55[ERROR] - 首页error测试
+2018-04-09 14:34:22,435 - /root/python27/devopsenv/opsweb/dashboard/views.py:56[DEBUG] - 首页debug测试
+2018-04-09 14:34:42,789 - /root/python27/devopsenv/opsweb/dashboard/views.py:55[ERROR] - 首页error测试
+2018-04-09 14:34:42,789 - /root/python27/devopsenv/opsweb/dashboard/views.py:56[DEBUG] - 首页debug测试
+2018-04-09 14:34:46,078 - /root/python27/devopsenv/opsweb/dashboard/views.py:55[ERROR] - 首页error测试
+2018-04-09 14:34:46,078 - /root/python27/devopsenv/opsweb/dashboard/views.py:56[DEBUG] - 首页debug测试
+2018-04-11 10:59:17,067 - /root/python27/devopsenv/opsweb/dashboard/views.py:55[ERROR] - 首页error测试
+2018-04-11 10:59:17,067 - /root/python27/devopsenv/opsweb/dashboard/views.py:56[DEBUG] - 首页debug测试
+2018-04-11 11:07:38,693 - /root/python27/devopsenv/opsweb/dashboard/views.py:55[ERROR] - 首页error测试
+2018-04-11 11:07:38,693 - /root/python27/devopsenv/opsweb/dashboard/views.py:56[DEBUG] - 首页debug测试
+2018-04-11 11:15:53,127 - /root/python27/devopsenv/opsweb/dashboard/views.py:55[ERROR] - 首页error测试
+2018-04-11 11:15:53,127 - /root/python27/devopsenv/opsweb/dashboard/views.py:56[DEBUG] - 首页debug测试
+2018-04-11 12:22:28,629 - /root/python27/devopsenv/opsweb/dashboard/views.py:55[ERROR] - 首页error测试
+2018-04-11 12:22:28,630 - /root/python27/devopsenv/opsweb/dashboard/views.py:56[DEBUG] - 首页debug测试
+2018-04-12 10:33:36,332 - /root/python27/devopsenv/opsweb/dashboard/views.py:55[ERROR] - 首页error测试
+2018-04-12 10:33:36,333 - /root/python27/devopsenv/opsweb/dashboard/views.py:56[DEBUG] - 首页debug测试
+2018-04-12 10:39:26,444 - /root/python27/devopsenv/opsweb/dashboard/views.py:55[ERROR] - 首页error测试
+2018-04-12 10:39:26,445 - /root/python27/devopsenv/opsweb/dashboard/views.py:56[DEBUG] - 首页debug测试

@@ -1,0 +1,273 @@
+{% extends "public/layout.html" %}
+
+{% block body %}
+    <table class="table table-striped">
+        <tr>
+            <th>#</th>
+            <th>用户id</th>
+            <th>用户名</th>
+            <th>中文名</th>
+            <th>邮箱</th>
+            <th>电话</th>
+            <th>所在组</th>
+            <th>职位</th>
+            <th>部门</th>
+            <th>状态</th>
+            <th>操作</th>
+        </tr>
+        {% for user_one in object_list %}
+        <tr>
+            <td>{{ forloop.counter }}</td>
+            <td>{{ user_one.id }}</td>
+            <td>{{ user_one.username }}</td>
+            <td>{{ user_one.profile.cn_name|default_if_none:'无名氏' }}</td>
+            <td>{{ user_one.email }}</td>
+            <td>{{ user_one.profile.phone }}</td>
+            <td>
+                {% for group in user_one.groups.all %}
+                    {{ group.name }}&#12288;
+                {% endfor %}
+            </td>
+            <td>{{ user_one.profile.title }}</td>
+            <td>
+                {{ user_one.profile.department.name|default_if_none:"无部门" }}
+            </td>
+            <td class="user_status">
+                {% if user_one.is_active %}
+                    <span class="glyphicon glyphicon-ok-circle text-success"></span>正常
+                {% else %}
+                    <span class="glyphicon glyphicon-warning-sign text-warning"></span>禁止
+                {% endif %}
+            </td>
+            <td>
+                <div class="btn-group">
+                    <div class="btn-group">
+                        <button class="btn btn-primary btn-sm dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="false">
+                            修改
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                                    <!--全局变量perm，这是定义好的，记住即可。后边的就是应用名称+权限名称-->
+                            <!--表示 如果有change_department权限的话，就在界面展示出来部门的下拉框-->
+                            {% if perms.dashboard.change_department %}
+                                <li role="presentation"><a role="menuitem" tabindex="-1" href="/user/modifydepartment/?user={{ user_one.id }}">部门</a></li>
+                            {% endif %}
+                            <!--<li role="presentation"><a role="menuitem" tabindex="-1" href="/user/modifydepartment/?user={{ user_one.id }}">部门</a></li>-->
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="/user/modifyphone/?uid={{ user_one.id }}">用户信息</a></li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#" data='{"uid":"{{ user_one.id }}"}' class="user_to_group">添加指定组</a></li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#" data='{"uid":"{{ user_one.id }}"}' class="user_del_group">删除指定组</a></li>
+                        </ul>
+                    </div>
+                    {% if user_one.is_active %}
+                        <button type="button" class="btn btn-sm btn-warning modify_user_status" status="true" data="{{ user_one.id }}">禁用</button>
+                    {% else %}
+                        <button type="button" class="btn btn-sm modify_user_status btn-info" status="false" data="{{ user_one.id }}">开启</button>
+                    {% endif %}
+                </div>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <div class="panel-default">
+        <center>
+            <ul class="pagination">
+                <li><a href="/user/userlist/?page=1">首页</a></li>
+                    {% if page_obj.has_previous %}
+                    <li><a href="/user/userlist/?page={{ page_obj.previous_page_number }}">上一页</a></li>
+                    {% else %}
+                        <li class="disabled"><a href="#">上一页</a></li>
+                    {% endif %}
+
+                    {# {% for p in page_obj.paginator.page_range %} #}
+                    {% for p in page_range %}
+                        <li {% if page_obj.number == p %} class="active" {% endif %}><a href="/user/userlist/?page={{ p }}">{{ p }}</a></li>
+                    {% endfor %}
+
+                    {% if page_obj.has_next %}
+                        <li><a href="/user/userlist/?page={{ page_obj.next_page_number }}">下一页</a></li>
+                    {% else %}
+                        <li class="disabled"><a href="#">下一页</a></li>
+                    {% endif %}
+                <li><a href="/user/userlist/?page={{ page_obj.paginator.num_pages }}">末页</a></li>
+            </ul>
+        </center>
+    </div>
+
+
+
+    <div class="modal fade" id="user_to_group_modal" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">×</button>
+                    <h4 id="user_to_group_modal_title"></h4>
+                </div>
+                <div class="modal-body form-inline col-xs-6">
+                    <select class="form-control" id="all_user_group">
+                    </select>
+                    <button class="btn btn-primary" id="user_to_group_btn">提交</button>
+                </div>
+                <div class="modal-footer">
+                    <input class="btn btn-default" data-dismiss="modal" aria-hidden="true" type="button" value="取消">
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="user_del_group_modal" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">×</button>
+                    <h4 id="user_to_group_modal_title"></h4>
+                </div>
+                <div class="modal-body form-inline col-xs-6">
+                    <select class="form-control" id="al_user_group">
+                    </select>
+                    <button class="btn btn-primary" id="user_del_group_btn">提交</button>
+                </div>
+                <div class="modal-footer">
+                    <input class="btn btn-default" data-dismiss="modal" aria-hidden="true" type="button" value="取消">
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
+
+{% block js %}
+<script>
+    function change_user_status(status_td_obj, status){
+        if (status == "true"){
+            status_td_obj.html('<span class="glyphicon glyphicon-warning-sign text-warning"></span>禁止')
+        }else{
+            status_td_obj.html('<span class="glyphicon glyphicon-ok-circle text-success"></span>正常')
+        }
+    }
+    function modify_user_status(user_id){
+        $.post("/user/modifystatus/", {"user_id": user_id}, function(res){
+            if (res.status != 0){
+                swal({
+                    title: res.errmsg,
+                    type: "error",
+                    confirmButtonText: "知道了"
+                });
+            }
+        })
+    }
+    $(function(){
+        $(".modify_user_status").click(function(){
+            var click_obj = $(this);
+            var status = click_obj.attr("status");
+            if(status === "true"){
+                click_obj.removeClass("btn-warning").addClass("btn-info").attr("status", "false").text("开启");
+            }else{
+                click_obj.removeClass("btn-info").addClass("btn-warning").attr("status", "true").text("禁用");
+            }
+            change_user_status(click_obj.parents("td").siblings(".user_status"), status);
+            modify_user_status(click_obj.attr('data'));
+        });
+
+        /*
+        *
+        * 将用户添加到指定组
+        *
+        * */
+        var uid;
+        var user_to_group_modal = $("#user_to_group_modal");
+        var all_user_group = $("#all_user_group");
+
+        $(".user_to_group").click(function(){
+            user_to_group_modal.modal("show");
+            var data = JSON.parse($(this).attr('data'));
+            uid = data.uid;
+            $.get("/group/",{"uid":uid},function(res){
+                html = '<option value="0">请选择用户组</option>';
+
+                $.each(res, function(n, obj){
+                    html += '<option value="'+obj.pk+'">'+obj.fields.name+'</option>';
+                });
+                all_user_group.html(html)
+            });
+            return false;
+        });
+
+        // 执行将用户添加到指定用户组
+        $("#user_to_group_btn").click(function(){
+
+            var url = "/group/usergroup/";
+            var gid = all_user_group.val();
+            user_to_group_modal.modal("hide");
+            $.post(url, {"uid": uid, "gid": gid}, function(res){
+                if(res.status == 0){
+                    swal({
+                        "title": "添加成功",
+                        "text": "",
+                        "type": "success"
+                    },function(){
+                        setTimeout(function(){
+                            window.location.reload();
+                        },50);
+                    })
+                }else{
+                    swal("操作失败", res.errmsg, "error");
+                }
+            })
+        })
+
+
+
+        /*
+        *
+        * 将用户从指定组删除
+        *
+        * */
+        var uid;
+        var user_del_group_modal = $("#user_del_group_modal");
+        var al_user_group = $("#al_user_group");
+
+        $(".user_del_group").click(function(){
+            user_del_group_modal.modal("show");
+            var data = JSON.parse($(this).attr('data'));
+            uid = data.uid;
+            $.get("/group/del/",{"uid":uid},function(res){
+                html = '<option value="0">请选择用户组</option>';
+
+                $.each(res, function(n, obj){
+                    html += '<option value="'+obj.pk+'">'+obj.fields.name+'</option>';
+                });
+                al_user_group.html(html)
+            });
+            return false;
+        });
+
+                // 执行将用户从指定用户组删除
+        $("#user_del_group_btn").click(function(){
+
+            var url = "/group/delgroup/";
+            var gid = al_user_group.val();
+            user_del_group_modal.modal("hide");
+            $.post(url, {"uid": uid, "gid": gid}, function(res){
+                if(res.status == 0){
+                    swal({
+                        "title": "删除成功",
+                        "text": "",
+                        "type": "success"
+                    },function(){
+                        setTimeout(function(){
+                            window.location.reload();
+                        },50);
+                    })
+                }else{
+                    swal("操作失败", res.errmsg, "error");
+                }
+            })
+        })
+
+    })
+</script>
+{% endblock %}
+

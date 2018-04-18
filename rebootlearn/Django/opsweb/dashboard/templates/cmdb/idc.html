@@ -1,0 +1,64 @@
+{% extends "public/layout.html" %}
+
+{% block body %}
+<div class="container" style="margin-top: 30px">
+    <form id="addidc-form" >
+      	机房名称 : <input type="text" name="name" class="form-group">
+        <input type="submit" value="Add" class="btn btn-success">
+     <!--   IP: <input type="text" name="ip" class="form-group">
+       MEM: <input type="text" name="mem" class="form-group">
+        IDC_ID<input type="text" name="idc_id" class="form-group">
+        CREATE_TIME<input type="text" name="creat_time" class="form-group">
+        <input type="submit" value="Add" class="btn btn-default"> -->
+    </form>
+    <br>
+    <table border="1" class="table table-bordered">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Location</th>
+               <!-- <th>idc_id</th>
+                <th>creat_time</th> -->
+            </tr>
+        </thead>
+        <tbody id="idc_table">
+        </tbody>
+    </table>
+</div>
+
+{% endblock%}
+
+
+{% block js%}
+<script>
+        init_page()
+        $('#addidc-form').on('submit',function () {
+        var idcname = $('#addidc-form').find('[name="name"]')
+        $.post('/addidc',{name:idcname.val()},function () {
+
+            init_page()
+            idcname.val('')
+        })
+        return false
+    })
+
+function init_page() {
+    $.getJSON('/idclist',function (res) {
+        var idc_str = ''
+        $.each(res, function (i,v) {
+            console.log(v)
+            idc_str+='<tr>'
+            idc_str+='<td>'+v[0]+'</td>'
+            idc_str+='<td>'+v[1]+'</td>'
+           // idc_str+='<td>'+v[2]+'</td>'
+           //idc_str+='<td>'+v[3]+'</td>'
+            idc_str+='</tr>'
+        })
+        $('#idc_table').html(idc_str)
+    })
+
+}
+
+</script>
+
+{% endblock %}
