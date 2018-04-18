@@ -5,7 +5,7 @@ app = Flask(__name__)
 app.secret_key = 'A0Zr98j/3yX Rasdasdasdsa~XHH!jmN]LWX/,?RT'
 
 import MySQLdb as mysql
-conn = mysql.connect(user='woniu',passwd='123456',host='59.110.12.72',db='reboot12')
+conn = mysql.connect(user='sunfan',passwd='123456',host='59.110.12.72',db='reboot12')
 conn.autocommit(True)
 cur = conn.cursor()
 #cur.execute('select * from woniu_user')
