@@ -1,4 +1,3 @@
-2018-03-22 15:59:56,437 - /root/python27/devopsenv/lib/python2.7/site-packages/django/db/backends/utils.py:89[DEBUG] - (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
 2018-03-22 15:59:56,457 - /root/python27/devopsenv/lib/python2.7/site-packages/django/db/backends/utils.py:89[DEBUG] - (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
 2018-03-22 15:59:56,458 - /root/python27/devopsenv/lib/python2.7/site-packages/django/db/backends/utils.py:89[DEBUG] - (0.001) SHOW FULL TABLES; args=None
 2018-03-22 15:59:56,463 - /root/python27/devopsenv/lib/python2.7/site-packages/django/db/backends/utils.py:89[DEBUG] - (0.004) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
